@@ -1,3 +1,25 @@
 body {
-    background-color: teal;
+    margin: 0;
+    padding: 0;
+    header {
+        z-index: 999;
+        height: 60vh;
+        .owl-carousel {
+            .firstSliderItem {
+                background-image: url("/imgs/deal.jpg");
+                background-size: cover;
+                height: 60vh;
+            }
+            .secondSliderItem {
+                background-image: url("/imgs/team.jpg");
+                background-size: cover;
+                height: 60vh;
+            }
+            .thirdSliderItem {
+                background-image: url("/imgs/suit.jpg");
+                background-size: cover;
+                height: 60vh;
+            }
+        }
+    }
 }

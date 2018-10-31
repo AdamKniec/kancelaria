@@ -1,4 +1,20 @@
 body {
-  background-color: teal; }
+  margin: 0;
+  padding: 0; }
+  body header {
+    z-index: 999;
+    height: 60vh; }
+    body header .owl-carousel .firstSliderItem {
+      background-image: url("/imgs/deal.jpg");
+      background-size: cover;
+      height: 60vh; }
+    body header .owl-carousel .secondSliderItem {
+      background-image: url("/imgs/team.jpg");
+      background-size: cover;
+      height: 60vh; }
+    body header .owl-carousel .thirdSliderItem {
+      background-image: url("/imgs/suit.jpg");
+      background-size: cover;
+      height: 60vh; }
 
 /*# sourceMappingURL=style.css.map */

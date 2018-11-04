@@ -1,20 +1,29 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0; }
-  body header {
-    z-index: 999;
-    height: 60vh; }
+  body .navbar ul {
+    display: flex;
+    list-style-type: none; }
+  body header .owl-carousel {
+    color: white;
+    /*Poniszy kod na pewno mozna uprościć*/ }
+    body header .owl-carousel h2 {
+      font-size: 2.5rem; }
     body header .owl-carousel .firstSliderItem {
-      background-image: url("/imgs/deal.jpg");
-      background-size: cover;
-      height: 60vh; }
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/deal.jpg");
+      background-size: cover; }
     body header .owl-carousel .secondSliderItem {
-      background-image: url("/imgs/team.jpg");
-      background-size: cover;
-      height: 60vh; }
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/team.jpg");
+      background-size: cover; }
     body header .owl-carousel .thirdSliderItem {
-      background-image: url("/imgs/suit.jpg");
-      background-size: cover;
-      height: 60vh; }
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/suit.jpg");
+      background-size: cover; }
+    body header .owl-carousel .firstSliderItem, body header .owl-carousel .secondSliderItem, body header .owl-carousel .thirdSliderItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 70vh; }
 
 /*# sourceMappingURL=style.css.map */

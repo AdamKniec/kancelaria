@@ -1,25 +1,62 @@
 body {
     margin: 0;
     padding: 0;
+    .navbar {
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+    }
     header {
-        z-index: 999;
-        height: 60vh;
+        // height: 60vh;
         .owl-carousel {
+            color: white;
+            h2 {
+                font-size: 2.5rem;
+            }
+            /*Poniszy kod na pewno mozna uprościć*/
             .firstSliderItem {
-                background-image: url("/imgs/deal.jpg");
+                background: 
+                linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url("/imgs/deal.jpg");
                 background-size: cover;
-                height: 60vh;
             }
             .secondSliderItem {
-                background-image: url("/imgs/team.jpg");
+                background: 
+                linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url("/imgs/team.jpg");
                 background-size: cover;
-                height: 60vh;
             }
             .thirdSliderItem {
-                background-image: url("/imgs/suit.jpg");
+                background: 
+                linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url("/imgs/suit.jpg");
                 background-size: cover;
-                height: 60vh;
+            }
+            .firstSliderItem, .secondSliderItem, .thirdSliderItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 70vh;
             }
         }
     }
+    // .aboutUs {
+    //     .description {
+            
+    //     }
+    //     .values {
+
+    //     }
+    // }
 }

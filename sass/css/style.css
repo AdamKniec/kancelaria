@@ -11,13 +11,13 @@ body {
     body header .owl-carousel h2 {
       font-size: 2.5rem; }
     body header .owl-carousel .firstSliderItem {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/deal.jpg");
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/kancelaria/imgs/deal.jpg");
       background-size: cover; }
     body header .owl-carousel .secondSliderItem {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/team.jpg");
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/kancelaria/imgs/team.jpg");
       background-size: cover; }
     body header .owl-carousel .thirdSliderItem {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/imgs/suit.jpg");
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/kancelaria/imgs/suit.jpg");
       background-size: cover; }
     body header .owl-carousel .firstSliderItem, body header .owl-carousel .secondSliderItem, body header .owl-carousel .thirdSliderItem {
       display: flex;

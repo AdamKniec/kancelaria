@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src:  url('fonts/Roboto-Regular');
+  }
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
     .navbar {
         ul {
             display: flex;
@@ -8,55 +13,150 @@ body {
         }
     }
     header {
-        // height: 60vh;
-        .owl-carousel {
+        .heroBanner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
-            h2 {
-                font-size: 2.5rem;
-            }
-            /*Poniszy kod na pewno mozna uprościć*/
-            .firstSliderItem {
-                background: 
+            background: 
                 linear-gradient(
-                  rgba(0, 0, 0, 0.6),
-                  rgba(0, 0, 0, 0.6)
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.6)
                 ),
-                url("/kancelaria/imgs/deal.jpg");
+                url("/imgs/suit.jpg");
                 background-size: cover;
-            }
-            .secondSliderItem {
-                background: 
-                linear-gradient(
-                  rgba(0, 0, 0, 0.6),
-                  rgba(0, 0, 0, 0.6)
-                ),
-                url("/kancelaria/imgs/team.jpg");
-                background-size: cover;
-            }
-            .thirdSliderItem {
-                background: 
-                linear-gradient(
-                  rgba(0, 0, 0, 0.6),
-                  rgba(0, 0, 0, 0.6)
-                ),
-                url("/kancelaria/imgs/suit.jpg");
-                background-size: cover;
-            }
-            .firstSliderItem, .secondSliderItem, .thirdSliderItem {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 height: 70vh;
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 100;
+                border: 1px solid white;
+                padding: 20px;
+            }
+            button {
+                border: none;
+                font-size: 1rem;
+                color: #FFFFFF;
+                padding: 15px;
+                width: auto;
+                text-align: center;
+                cursor: pointer;
+                background: linear-gradient(-45deg, #0D47A1, #64B5F6, #FFAB00);
+                background-size: 400% 400%;
+                animation: Gradient 15s ease infinite;
+                @keyframes Gradient {
+                    0% {
+                        background-position: 0% 50%
+                    }
+                    50% {
+                        background-position: 100% 50%
+                    }
+                    100% {
+                        background-position: 0% 50%
+                    }
+                }
+                }
+        }
+        // .owl-carousel {
+        //     color: white;
+        //     h2 {
+        //         font-size: 2.5rem;
+        //     }
+        //     /*Poniszy kod na pewno mozna uprościć*/
+        //     .firstSliderItem {
+        //         background: 
+        //         linear-gradient(
+        //           rgba(0, 0, 0, 0.6),
+        //           rgba(0, 0, 0, 0.6)
+        //         ),
+        //         url("/imgs/deal.jpg");
+        //         background-size: cover;
+        //     }
+        //     .secondSliderItem {
+        //         background: 
+        //         linear-gradient(
+        //           rgba(0, 0, 0, 0.6),
+        //           rgba(0, 0, 0, 0.6)
+        //         ),
+        //         url("/imgs/team.jpg");
+        //         background-size: cover;
+        //     }
+        //     .thirdSliderItem {
+        //         background: 
+        //         linear-gradient(
+        //           rgba(0, 0, 0, 0.6),
+        //           rgba(0, 0, 0, 0.6)
+        //         ),
+        //         url("/imgs/suit.jpg");
+        //         background-size: cover;
+        //     }
+        //     .firstSliderItem, .secondSliderItem, .thirdSliderItem {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+        //         height: 70vh;
+        //     }
+        // }
+    }
+    .aboutUs {
+        /*Small refactor needed below*/
+        padding-left: 15px;
+        padding-right:15px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        .description {
+            max-width: 600px;
+            .boldIntro {
+                font-weight: bold;
+            }
+        }
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+    }
+    .offer {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: #f3f3f3; 
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .offerContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            div {
+                min-width: 300px;
+                height: 300px;
+                background-color: teal;
+                margin: 20px;
             }
         }
     }
-    // .aboutUs {
-    //     .description {
-            
-    //     }
-    //     .values {
+    .quoteSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        opacity: 0.7;
+        background: 
+                url("/imgs/books.jpg");
+                background-attachment: fixed;
+        p {
+            font-size: 2rem;
+            color: white;
+        }
+    }
+    .team {
+        height: 60vh;
+    }
 
-    //     }
-    // }
 }

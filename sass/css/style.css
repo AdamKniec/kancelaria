@@ -86,6 +86,41 @@ body {
       font-size: 2rem;
       color: white; }
   body .team {
-    height: 60vh; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*Improvement below*/
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    body .team .teamIntro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      padding-bottom: 5%; }
+    body .team .membersContainer {
+      display: flex;
+      align-items: center; }
+      body .team .membersContainer .teamMemberBox {
+        margin: 10px;
+        width: 350px; }
+        body .team .membersContainer .teamMemberBox .memberDetails {
+          width: auto; }
+        body .team .membersContainer .teamMemberBox img {
+          width: 100%;
+          height: 350px; }
+  body footer {
+    background-color: #173654;
+    color: white;
+    display: flex;
+    flex-direction: column; }
+    body footer .footerContentContainer {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around; }
+      body footer .footerContentContainer .companySummary {
+        width: 300px; }
 
 /*# sourceMappingURL=style.css.map */

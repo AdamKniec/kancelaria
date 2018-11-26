@@ -1,20 +1,51 @@
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("fonts/Roboto-Regular"); }
+  src: url("/fonts/Roboto-Regular.ttf"); }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto'; }
-  body .navbar ul {
+  font-family: 'Roboto-Regular', 'sans-serif'; }
+  body header .navbar {
     display: flex;
-    list-style-type: none; }
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 10px;
+    transition: all 0.2s;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    width: 100%; }
+    body header .navbar ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      body header .navbar ul li {
+        padding: 40px;
+        font-size: 1rem;
+        transition: padding 0.2s; }
+        body header .navbar ul li a {
+          text-decoration: none;
+          color: white; }
+  body header .sticky {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+    opacity: 0.9;
+    height: 80px; }
+    body header .sticky ul li {
+      padding: 30px;
+      transition: padding 0.2s; }
   body header .heroBanner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("/kancelaria/imgs/suit.jpg");
+    background: linear-gradient(rgba(27, 37, 64, 0.7), rgba(27, 37, 64, 0.9)), url("/imgs/suit.jpg");
     background-size: cover;
     height: 70vh; }
     body header .heroBanner h1 {
@@ -51,6 +82,8 @@ body {
     justify-content: center; }
     body .aboutUs .description {
       max-width: 600px; }
+      body .aboutUs .description h3 {
+        color: #ae974f; }
       body .aboutUs .description .boldIntro {
         font-weight: bold; }
     body .aboutUs .values {
@@ -72,19 +105,8 @@ body {
       body .offer .offerContainer div {
         min-width: 300px;
         height: 300px;
-        background-color: teal;
+        border: 1px solid black;
         margin: 20px; }
-  body .quoteSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    opacity: 0.7;
-    background: url("/kancelaria/imgs/books.jpg");
-    background-attachment: fixed; }
-    body .quoteSection p {
-      font-size: 2rem;
-      color: white; }
   body .team {
     display: flex;
     flex-direction: column;
@@ -105,21 +127,36 @@ body {
       align-items: center; }
       body .team .membersContainer .teamMemberBox {
         margin: 10px;
-        width: 350px; }
+        width: 280px; }
         body .team .membersContainer .teamMemberBox .memberDetails {
           width: auto; }
         body .team .membersContainer .teamMemberBox img {
           width: 100%;
-          height: 350px; }
+          height: 400px; }
+  body .partners .owl-carousel {
+    width: 1000px;
+    margin: 0 auto; }
+    body .partners .owl-carousel .firstSliderItem, body .partners .owl-carousel .secondSliderItem, body .partners .owl-carousel .thirdSliderItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 200px;
+      height: 200px; }
   body footer {
-    background-color: #173654;
+    background-color: #1b2540;
     color: white;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-bottom: 5%; }
+    body footer h3 {
+      /*Small refactor below*/
+      padding-top: 5%;
+      text-align: center; }
     body footer .footerContentContainer {
       display: flex;
-      justify-content: center;
-      justify-content: space-around; }
+      justify-content: center; }
+      body footer .footerContentContainer div {
+        margin: 40px; }
       body footer .footerContentContainer .companySummary {
         width: 300px; }
 

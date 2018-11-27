@@ -1,75 +1,86 @@
 @font-face {
   font-family: 'Roboto-Regular';
   src: url("/fonts/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("/fonts/Roboto-Bold.ttf"); }
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("/fonts/Roboto-Light.ttf"); }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto-Regular', 'sans-serif'; }
-  body header .navbar {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    padding-top: 10px;
-    transition: all 0.2s;
-    height: 100px;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    margin-right: 10px; }
-    body header .navbar img {
-      width: 60px;
-      height: 50px; }
-    body header .navbar ul {
+  font-family: 'Roboto-Light', 'sans-serif'; }
+  body header {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
+    body header .navbar {
       display: flex;
-      list-style-type: none;
+      align-items: center;
+      background-color: transparent;
+      padding-top: 10px;
+      transition: all 0.2s;
+      height: 100px;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      margin-right: 10px; }
+      body header .navbar img {
+        width: 60px;
+        height: 50px; }
+      body header .navbar ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        body header .navbar ul li {
+          padding: 40px;
+          font-size: 1rem;
+          transition: padding 0.2s; }
+          body header .navbar ul li a {
+            text-decoration: none;
+            color: black; }
+    body header .sticky {
+      position: fixed;
+      background-color: black;
+      width: 100%;
       padding: 0;
-      margin: 0; }
-      body header .navbar ul li {
-        padding: 40px;
-        font-size: 1rem;
+      z-index: 1;
+      opacity: 0.9;
+      height: 80px; }
+      body header .sticky ul li {
+        padding: 30px;
         transition: padding 0.2s; }
-        body header .navbar ul li a {
-          text-decoration: none;
-          color: black; }
-  body header .sticky {
-    position: fixed;
-    background-color: black;
-    width: 100%;
-    padding: 0;
-    z-index: 1;
-    opacity: 0.9;
-    height: 80px; }
-    body header .sticky ul li {
-      padding: 30px;
-      transition: padding 0.2s; }
-  body header .heroBanner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background: url("/imgs/header2.jpg");
-    background-size: cover;
-    height: 80vh; }
-    body header .heroBanner .headerIntroContainer {
-      margin-left: 10px;
-      width: 40%; }
-      body header .heroBanner .headerIntroContainer h1 {
-        font-size: 2.5rem;
-        font-weight: 100;
-        color: #1b2540; }
-      body header .heroBanner .headerIntroContainer button {
-        border: none;
-        font-size: 1rem;
-        color: #FFFFFF;
-        padding: 15px;
-        width: 200px;
-        text-align: center;
-        cursor: pointer;
-        background: linear-gradient(-45deg, #1b2540, #FFAB00);
-        background-size: 400% 400%;
-        animation: Gradient 15s ease infinite; }
+    body header .heroBanner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background: url("/imgs/header2.jpg");
+      background-size: cover;
+      height: 80vh;
+      background-position: center; }
+      body header .heroBanner .headerIntroContainer {
+        margin-left: 10px;
+        width: 40%; }
+        body header .heroBanner .headerIntroContainer h1 {
+          font-size: 3.5rem;
+          color: #1b2540;
+          font-family: serif;
+          border-bottom: 3px solid #ae974f; }
+        body header .heroBanner .headerIntroContainer button {
+          border: none;
+          font-size: 1rem;
+          color: #FFFFFF;
+          padding: 15px;
+          width: 200px;
+          margin-top: 15px;
+          text-align: center;
+          cursor: pointer;
+          background: linear-gradient(-45deg, #1b2540, #ae974f);
+          background-size: 400% 400%;
+          animation: Gradient 15s ease infinite; }
 @keyframes Gradient {
   0% {
     background-position: 0% 50%; }
@@ -83,23 +94,36 @@ body {
     padding-right: 15px;
     padding-top: 5%;
     padding-bottom: 5%;
-    display: flex;
     justify-content: space-between;
     justify-content: center; }
-    body .aboutUs .description {
-      max-width: 600px; }
-      body .aboutUs .description h3 {
-        color: #ae974f; }
-      body .aboutUs .description .boldIntro {
-        font-weight: bold; }
-    body .aboutUs .values {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 600px; }
+    body .aboutUs h3 {
+      color: #ae974f;
+      font-family: 'Roboto-Bold', 'sans-serif';
+      text-transform: uppercase;
+      font-size: 1.8rem; }
+    body .aboutUs .contentContainer {
+      display: flex; }
+      body .aboutUs .contentContainer .description {
+        max-width: 600px;
+        font-family: 'Roboto-Light', 'sans-serif'; }
+        body .aboutUs .contentContainer .description .boldIntro {
+          font-family: 'Roboto-Regular', 'sans-serif';
+          font-size: 1.3rem; }
+      body .aboutUs .contentContainer .values {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px; }
+        body .aboutUs .contentContainer .values .valueHeader {
+          font-family: 'Roboto-Regular', 'sans-serif'; }
   body .offer {
     padding-top: 5%;
     padding-bottom: 5%;
     background-color: #f3f3f3; }
+    body .offer h3 {
+      /*powtarzalne style wyjebac na gore*/
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: #ae974f; }
     body .offer .intro {
       display: flex;
       flex-direction: column;
@@ -109,10 +133,11 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
       body .offer .offerContainer div {
-        min-width: 300px;
+        width: 300px;
         height: 300px;
-        border: 1px solid black;
-        margin: 20px; }
+        background-color: #fff;
+        margin: 10px;
+        padding: 20px; }
   body .team {
     display: flex;
     flex-direction: column;
@@ -207,5 +232,9 @@ body {
         margin: 40px; }
       body footer .footerContentContainer .companySummary {
         width: 300px; }
+      body footer .footerContentContainer .navigation ul {
+        list-style-type: none;
+        text-align: center;
+        padding: 0; }
 
 /*# sourceMappingURL=style.css.map */

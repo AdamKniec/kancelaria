@@ -1,16 +1,25 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src:url('/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('/fonts/Roboto-Light.ttf');
 }
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto-Regular', 'sans-serif';
+    font-family: 'Roboto-Light', 'sans-serif';
     header {
+        box-shadow: 0 6px 8px 0 rgba(0,0,0,0.12),0 2px 4px 0 rgba(0,0,0,0.08);
         .navbar {
             display: flex;
-            // justify-content: space-around;
+            // justify-content: space-around;ś
             align-items: center;
             background-color: transparent;
             padding-top: 10px;
@@ -65,14 +74,15 @@ body {
             background: url("/imgs/header2.jpg");
             background-size: cover;
             height: 80vh;
+            background-position: center;
             .headerIntroContainer {
                 margin-left: 10px;
                 width: 40%;
                 h1 {
-                    font-size: 2.5rem;
-                    font-weight: 100;
+                    font-size: 3.5rem;
                     color: #1b2540;
-                    // border: 1px solid white;
+                    font-family: serif;
+                    border-bottom: 3px solid #ae974f;
                 }
                 button {
                     border: none;
@@ -81,9 +91,10 @@ body {
                     padding: 15px;
                     // width: auto;
                     width: 200px;
+                    margin-top: 15px;
                     text-align: center;
                     cursor: pointer;
-                    background: linear-gradient(-45deg,#1b2540, #FFAB00);
+                    background: linear-gradient(-45deg,#1b2540, #ae974f);
                     background-size: 400% 400%;
                     animation: Gradient 15s ease infinite;
                     @keyframes Gradient {
@@ -148,29 +159,49 @@ body {
         padding-right:15px;
         padding-top: 5%;
         padding-bottom: 5%;
-        display: flex;
         justify-content: space-between;
         justify-content: center;
-        .description {
-            max-width: 600px;
-            h3 {
-                color: #ae974f;
-            }
-            .boldIntro {
-                font-weight: bold;
-            }
+        h3 {
+            color: #ae974f;
+            font-family: 'Roboto-Bold', 'sans-serif';
+            text-transform: uppercase;
+            font-size: 1.8rem;
         }
-        .values {
+        .contentContainer {
             display: flex;
-            flex-wrap: wrap;
-            max-width: 600px;
+            .description {
+                max-width: 600px;
+                font-family: 'Roboto-Light', 'sans-serif';
+                .boldIntro {
+                    font-family: 'Roboto-Regular', 'sans-serif';
+                    font-size: 1.3rem;
+                }
+            }  
+            .values {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 600px;
+                .valueHeader {
+                    font-family: 'Roboto-Regular', 'sans-serif';
+                }
+            }
         }
+        
+        
+        
     }
 
     .offer {
         padding-top: 5%;
         padding-bottom: 5%;
         background-color: #f3f3f3; 
+        h3 {
+            /*powtarzalne style wyjebac na gore*/
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: #ae974f;
+
+        }
         .intro {
             display: flex;
             flex-direction: column;
@@ -181,10 +212,11 @@ body {
             justify-content: center;
             flex-wrap: wrap;
             div {
-                min-width: 300px;
+                width: 300px;
                 height: 300px;
-                border: 1px solid black;
-                margin: 20px;
+                background-color: #fff;
+                margin: 10px;
+                padding: 20px;
             }
         }
     }
@@ -283,8 +315,6 @@ body {
                 }
             }
         }
-        
-
     }
     .partners {
         .owl-carousel {
@@ -318,6 +348,13 @@ body {
             }
             .companySummary {
                 width: 300px;
+            }
+            .navigation {
+                ul {
+                    list-style-type: none;
+                    text-align: center;
+                    padding: 0;    
+                }
             }
         }
     }

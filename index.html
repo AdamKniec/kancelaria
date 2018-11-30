@@ -31,10 +31,10 @@
         <nav class="navbar">
             <img src="imgs/logo_png_2.png" alt="">
             <ul>
-                <li><a href="">O nas</a></li>
-                <li><a href="">Oferta</a></li>
-                <li><a href="">Nasz zespół</a></li>
-                <li><a href="">Kontakt</a></li>
+                <li><a href="#aboutUs">O nas</a></li>
+                <li><a href="#offer">Oferta</a></li>
+                <li><a href="#team">Nasz zespół</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
         <div class="heroBanner">
@@ -47,7 +47,7 @@
             
         </div>
     </header>
-    <section class="aboutUs">
+    <section class="aboutUs" id="aboutUs">
         <h3>o nas</h3>
         <div class="contentContainer">
             <div class="description">
@@ -61,32 +61,32 @@
             </div>
             <div class="values">
                     <figure>
-                        <img src="imgs/002-bag.png" alt="">
+                        <img src="imgs/groupIcon.svg" alt="">
                         <p class="valueHeader">Profesjonalizm</p>
                         <figcaption>Lorem ipsum sit dolor amet</figcaption>
                     </figure>
                     <figure>
-                        <img src="imgs/003-agreement-1.png" alt="">
+                        <img src="imgs/handshakeIcon.svg" alt="">
                         <p class="valueHeader">Zaangaowanie</p>
                         <figcaption>Lorem ipsum sit dolor amet</figcaption>
                     </figure>
                     <figure>
-                        <img src="imgs/005-calendar.png" alt="">
+                        <img src="imgs/diagramIcon.svg" alt="">
                         <p class="valueHeader">Terminowość</p>
                         <figcaption>Lorem ipsum sit dolor amet</figcaption>
                     </figure>
                     <figure>
-                        <img src="imgs/006-jigsaw.png" alt="">
+                        <img src="imgs/briefcaseIcon.svg" alt="">
                         <p class="valueHeader">Wsparcie</p>
                         <figcaption>Lorem ipsum sit dolor amet</figcaption>
                     </figure>
                 </div>
         </div>
     </section>
-    <section class="offer">
+    <section class="offer" id="offer">
         <div class="intro">
             <h3>oferta</h3>
-            <p>Specjalizujemy sie w ...</p>
+            <p class="offerIntro">Specjalizujemy sie w ...</p>
             <p>Nasi radcy maja doswiadczenie w bla bla bla Duis purus lorem, dignissim vel risus sed, aliquam scelerisque dolor.</p>
         </div>
         <div class="offerContainer">
@@ -107,7 +107,7 @@
     <!-- <section class="quoteSection">
         <p>Sprawiedliwość jest silniejsza nawet od prawa.</p>
     </section> -->
-    <section class="team">
+    <section class="team" id="team">
         <div class="teamIntro">
             <h3>NASZ ZESPÓŁ</h3>
             <p>Duis purus lorem, dignissim vel risus sed, aliquam scelerisque dolor. Mauris sollicitudin leo a magna sodales, ac mollis risus suscipit.
@@ -146,32 +146,39 @@
         </div>
     </section>
     <section class="contactForm">
+            <h3>CONTACT US</h2>
             <form class="form">
-                    <h2>CONTACT US</h2>
-                    <p type="Name:"><input placeholder="Write your name here.."></input></p>
-                    <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
-                    <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
-                    <button>Send Message</button>
-                  </form>
+                <label for="name">
+                    <input placeholder="Twoje Imię I nazwisko"></input>
+                </label>
+                <label for="email">
+                    <input placeholder="Twój ades email"></input>    
+                </label>
+                <label for="message">
+                    <textarea name="message" id="" cols="30" placeholder="w czym mozemy pomóć?" rows="10"></textarea>    
+                </label>
+                <button>Send Message</button>
+            </form>
     </section>
     <section class="partners">
         <h3></h3>
         <div class="owl-carousel">
-            <div class="firstSliderItem">
+            <div class="sliderItem">
                 <img src="imgs/logoEtuo.png" alt="">
             </div>
-            <div class="secondSliderItem">
+            <div class="sliderItem">
                 <img src="imgs/logoProfiSklep.jpg" alt="">
             </div>
-            <div class="thirdSliderItem">
+            <div class="sliderItem">
                 <img src="imgs/logoSzkolaTenisa.jpg" alt="">
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <h3>Kontakt</h3>
         <div class="footerContentContainer">
             <div class="companySummary">
+                <img src="imgs/logo_png_2.png" alt="">
                 <h4>male logo z podsumowaniem</h4>
                 <p>Duis purus lorem, dignissim vel risus sed, aliquam scelerisque dolor. Mauris sollicitudin leo a magna sodales, ac mollis risus suscipit. Phasellus rhoncus sem purus, at aliquet augue ultricies non. Donec imperdiet malesuada purus eget venenatis. Etiam porttitor est ex, ullamcorper fringilla odio euismod ut</p>
             </div>

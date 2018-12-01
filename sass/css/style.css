@@ -94,13 +94,14 @@ body {
     padding-right: 15px;
     padding-top: 5%;
     padding-bottom: 5%;
-    justify-content: space-between;
-    justify-content: center; }
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     body .aboutUs h3 {
-      color: #ae974f;
+      color: #1b2540;
       font-family: 'Roboto-Bold', 'sans-serif';
-      text-transform: uppercase;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      border-bottom: 1px solid #ae974f; }
     body .aboutUs .contentContainer {
       display: flex; }
       body .aboutUs .contentContainer .description {
@@ -126,15 +127,19 @@ body {
     body .offer h3 {
       /*powtarzalne style wyjebac na gore*/
       font-size: 1.8rem;
-      text-transform: uppercase;
-      color: #ae974f;
+      color: #1b2540;
+      border-bottom: 1px solid #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif'; }
     body .offer .intro {
       display: flex;
       flex-direction: column;
       align-items: center; }
       body .offer .intro .offerIntro {
+        font-size: 1.3rem;
         font-family: 'Roboto-Regular', 'sans-serif'; }
+      body .offer .intro .offerDescription {
+        text-align: center;
+        width: 50%; }
     body .offer .offerContainer {
       display: flex;
       justify-content: center;
@@ -163,20 +168,35 @@ body {
       justify-content: center;
       align-items: center;
       width: 45%;
-      padding-bottom: 5%; }
+      padding-bottom: 5%;
+      text-align: center; }
       body .team .teamIntro h3 {
-        color: #ae974f;
+        color: #1b2540;
         font-family: 'Roboto-Bold', 'sans-serif';
-        text-transform: uppercase;
+        border-bottom: 1px solid #ae974f;
         font-size: 1.8rem; }
     body .team .membersContainer {
       display: flex;
       align-items: center; }
       body .team .membersContainer .teamMemberBox {
         margin: 10px;
-        width: 280px; }
+        width: 280px;
+        text-align: center; }
         body .team .membersContainer .teamMemberBox .memberDetails {
           width: auto; }
+          body .team .membersContainer .teamMemberBox .memberDetails .name {
+            font-family: 'Roboto-Bold', 'sans-serif'; }
+          body .team .membersContainer .teamMemberBox .memberDetails .role {
+            font-family: 'Roboto-Regular', 'sans-serif';
+            color: #ae974f; }
+          body .team .membersContainer .teamMemberBox .memberDetails .socialMedia img {
+            width: 30px;
+            height: 30px;
+            transition: 0.2s; }
+            body .team .membersContainer .teamMemberBox .memberDetails .socialMedia img:hover {
+              transform: scale(1.2);
+              transition: 0.2s;
+              cursor: pointer; }
         body .team .membersContainer .teamMemberBox img {
           width: 100%;
           height: 400px; }
@@ -189,9 +209,9 @@ body {
     align-items: center;
     padding-bottom: 5%; }
     body .contactForm h3 {
-      color: #ae974f;
+      color: #1b2540;
+      border-bottom: 1px solid #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif';
-      text-transform: uppercase;
       font-size: 1.8rem;
       padding-top: 5%; }
     body .contactForm .form {
@@ -227,26 +247,38 @@ body {
         body .contactForm .form button:hover {
           background: #78788c;
           color: #fff; }
-  body .partners .owl-carousel {
-    width: 1000px;
-    margin: 0 auto; }
-    body .partners .owl-carousel .sliderItem {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 200px;
-      height: 200px; }
-      body .partners .owl-carousel .sliderItem img {
-        filter: grayscale(100%);
-        transition: 1s; }
-        body .partners .owl-carousel .sliderItem img:hover {
-          transition: 1s;
-          filter: grayscale(0%); }
+  body .partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body .partners h3 {
+      color: #1b2540;
+      border-bottom: 1px solid #ae974f;
+      font-family: 'Roboto-Bold', 'sans-serif';
+      font-size: 1.8rem;
+      text-align: center;
+      padding-top: 5%; }
+    body .partners .owl-carousel {
+      width: 1000px;
+      margin: 0 auto; }
+      body .partners .owl-carousel .sliderItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 200px; }
+        body .partners .owl-carousel .sliderItem img {
+          filter: grayscale(100%);
+          transition: 1s; }
+          body .partners .owl-carousel .sliderItem img:hover {
+            transition: 1s;
+            filter: grayscale(0%); }
   body footer {
     background-color: #1b2540;
     color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-bottom: 5%; }
     body footer h3 {
       /*Small refactor below*/
@@ -254,24 +286,33 @@ body {
       text-align: center;
       color: #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif';
-      text-transform: uppercase;
+      border-bottom: 1px solid #ae974f;
       font-size: 1.8rem;
-      padding-top: 5%; }
-    body footer h4 {
-      font-size: 1.3rem; }
+      padding-top: 5%;
+      width: 110px; }
     body footer .footerContentContainer {
       display: flex;
       justify-content: center; }
+      body footer .footerContentContainer h4 {
+        font-size: 1.3rem; }
       body footer .footerContentContainer div {
         margin: 40px; }
       body footer .footerContentContainer .companySummary {
         width: 300px; }
-        body footer .footerContentContainer .companySummary img {
-          width: 50px;
-          height: 40px; }
+        body footer .footerContentContainer .companySummary .footerDescriptionInfo {
+          display: flex;
+          margin: 0;
+          align-items: center; }
+          body footer .footerContentContainer .companySummary .footerDescriptionInfo img {
+            width: 50px;
+            height: 40px;
+            padding-right: 10px; }
       body footer .footerContentContainer .navigation ul {
         list-style-type: none;
         text-align: center;
         padding: 0; }
+  body .copyrightContainer p {
+    text-align: center;
+    opacity: 0.5; }
 
 /*# sourceMappingURL=style.css.map */

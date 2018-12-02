@@ -63,31 +63,20 @@ body {
       background-position: center; }
       body header .heroBanner .headerIntroContainer {
         margin-left: 10px;
-        width: 40%; }
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%; }
         body header .heroBanner .headerIntroContainer h1 {
-          font-size: 3.5rem;
-          color: #1b2540;
           font-family: serif;
-          border-bottom: 3px solid #ae974f; }
-        body header .heroBanner .headerIntroContainer button {
-          border: none;
-          font-size: 1rem;
-          color: #FFFFFF;
-          padding: 15px;
-          width: 200px;
-          margin-top: 15px;
-          text-align: center;
-          cursor: pointer;
-          background: linear-gradient(-45deg, #1b2540, #ae974f);
-          background-size: 400% 400%;
-          animation: Gradient 15s ease infinite; }
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
+          margin-bottom: 0; }
+        body header .heroBanner .headerIntroContainer p {
+          text-transform: uppercase; }
+        body header .heroBanner .headerIntroContainer img {
+          height: 200px;
+          width: 200px; }
   body .aboutUs {
     /*Small refactor needed below*/
     padding-left: 15px;
@@ -150,10 +139,23 @@ body {
         background-color: #fff;
         margin: 10px;
         padding: 20px;
-        transition: 0.2s; }
+        transition: 0.2s;
+        position: relative;
+        box-shadow: 0 0 5px rgba(33, 33, 33, 0.2); }
         body .offer .offerContainer div:hover {
           box-shadow: 0 0 50px rgba(33, 33, 33, 0.2);
           transition: 0.2s; }
+        body .offer .offerContainer div img {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          opacity: 0.15;
+          bottom: 0;
+          right: 0; }
+        body .offer .offerContainer div h4 {
+          color: #ae974f; }
+        body .offer .offerContainer div ul li {
+          list-style-type: none; }
   body .team {
     display: flex;
     flex-direction: column;

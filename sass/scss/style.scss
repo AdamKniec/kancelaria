@@ -1,15 +1,15 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('/kancelaria/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto-Bold';
-    src: url('/kancelaria/fonts/Roboto-Bold.ttf');
+    src: url('/fonts/Roboto-Bold.ttf');
 }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('/kancelaria/fonts/Roboto-Light.ttf');
+    src: url('/fonts/Roboto-Light.ttf');
 }
 body {
     margin: 0;
@@ -29,7 +29,7 @@ body {
             width: 100%;
             margin-right: 10px;
             z-index: 999;
-            img {
+            .logo {
                 padding-left: 10px;
                 width: 60px;
                 height: 50px;
@@ -40,13 +40,26 @@ body {
                 padding: 0;
                 margin:0;
                 li {
-                    padding: 40px;
+                    padding: 20px;
                     font-size: 1rem;
                     transition: padding 0.2s;
                     a {
                         text-decoration: none;
                         color: black;
                     }
+                }
+            }
+            .languageSwitcher {
+                width: 30px;
+                height: 20px;
+                position: absolute;
+                right: 10px;
+                opacity: 0.5;
+                transition: 0.2s;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                    transition: 0.2s;
                 }
             }
         }
@@ -72,7 +85,7 @@ body {
             background-size:contain;
             background-position:center;
             // align-items: center;
-            background: url("/kancelaria/imgs/header2.jpg");
+            background: url("/imgs/header-minified.jpg");
             background-size: cover;
             height: 80vh;
             background-position: center;
@@ -203,6 +216,7 @@ body {
                 flex-wrap: wrap;
                 max-width: 600px;
                 figure {
+                    width: 200px;
                     img {
                         width: 50px;
                         height: 50px;
@@ -219,7 +233,7 @@ body {
     .offer {
         padding-top: 5%;
         padding-bottom: 5%;
-        background-color: #f3f3f3; 
+        background-color: #f3f3f3;
         h3 {
             /*powtarzalne style wyjebac na gore*/
             font-size: 1.8rem;
@@ -247,8 +261,8 @@ body {
             justify-content: center;
             flex-wrap: wrap;
             div {
-                width: 300px;
-                height: 300px;
+                width: 250px;
+                height: 250px;
                 background-color: #fff;
                 margin: 10px;
                 padding: 20px;
@@ -311,6 +325,7 @@ body {
         .membersContainer {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             .teamMemberBox {
                 margin: 10px;
                 width: 280px;
@@ -420,8 +435,9 @@ body {
             padding-top: 5%;
         }
         .owl-carousel {
-            width: 1000px;
-            margin: 0 auto;
+            //Jak zrobic zeby bylo gucci?
+            width: 50%;
+            // margin: 0 auto;
             .sliderItem {
                 display: flex;
                 flex-direction: column;
@@ -462,6 +478,7 @@ body {
         .footerContentContainer {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             h4 {
                 font-size: 1.3rem;
             }

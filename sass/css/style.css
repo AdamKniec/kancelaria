@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/kancelaria/fonts/Roboto-Regular.ttf"); }
+  src: url("/fonts/Roboto-Regular.ttf"); }
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url("/kancelaria/fonts/Roboto-Bold.ttf"); }
+  src: url("/fonts/Roboto-Bold.ttf"); }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("/kancelaria/fonts/Roboto-Light.ttf"); }
+  src: url("/fonts/Roboto-Light.ttf"); }
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ body {
       width: 100%;
       margin-right: 10px;
       z-index: 999; }
-      body header .navbar img {
+      body header .navbar .logo {
         padding-left: 10px;
         width: 60px;
         height: 50px; }
@@ -34,12 +34,23 @@ body {
         padding: 0;
         margin: 0; }
         body header .navbar ul li {
-          padding: 40px;
+          padding: 20px;
           font-size: 1rem;
           transition: padding 0.2s; }
           body header .navbar ul li a {
             text-decoration: none;
             color: black; }
+      body header .navbar .languageSwitcher {
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        opacity: 0.5;
+        transition: 0.2s; }
+        body header .navbar .languageSwitcher:hover {
+          opacity: 1;
+          transform: scale(1.1);
+          transition: 0.2s; }
     body header .sticky {
       position: fixed;
       background-color: white;
@@ -57,7 +68,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background: url("/kancelaria/imgs/header2.jpg");
+      background: url("/imgs/header-minified.jpg");
       background-size: cover;
       height: 80vh;
       background-position: center; }
@@ -103,12 +114,14 @@ body {
         display: flex;
         flex-wrap: wrap;
         max-width: 600px; }
-        body .aboutUs .contentContainer .values figure img {
-          width: 50px;
-          height: 50px; }
-        body .aboutUs .contentContainer .values figure .valueHeader {
-          font-family: 'Roboto-Regular', 'sans-serif';
-          margin-top: 0; }
+        body .aboutUs .contentContainer .values figure {
+          width: 200px; }
+          body .aboutUs .contentContainer .values figure img {
+            width: 50px;
+            height: 50px; }
+          body .aboutUs .contentContainer .values figure .valueHeader {
+            font-family: 'Roboto-Regular', 'sans-serif';
+            margin-top: 0; }
   body .offer {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -134,8 +147,8 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
       body .offer .offerContainer div {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         background-color: #fff;
         margin: 10px;
         padding: 20px;
@@ -179,7 +192,8 @@ body {
         font-size: 1.8rem; }
     body .team .membersContainer {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      flex-wrap: wrap; }
       body .team .membersContainer .teamMemberBox {
         margin: 10px;
         width: 280px;
@@ -261,8 +275,7 @@ body {
       text-align: center;
       padding-top: 5%; }
     body .partners .owl-carousel {
-      width: 1000px;
-      margin: 0 auto; }
+      width: 50%; }
       body .partners .owl-carousel .sliderItem {
         display: flex;
         flex-direction: column;
@@ -294,7 +307,8 @@ body {
       width: 110px; }
     body footer .footerContentContainer {
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      flex-wrap: wrap; }
       body footer .footerContentContainer h4 {
         font-size: 1.3rem; }
       body footer .footerContentContainer div {

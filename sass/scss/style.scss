@@ -25,6 +25,7 @@ body {
         display: flex;
         padding-bottom: 4%;
         justify-content: center;
+        font-family: 'TrajanPro-Bold';
         &::after {
             content: '';
             background-color: #ae974f;
@@ -64,7 +65,7 @@ body {
                     transition: padding 0.2s;
                     a {
                         text-decoration: none;
-                        color: black;
+                        color: white;
                     }
                 }
             }
@@ -91,10 +92,15 @@ body {
             // opacity: 0.9;
             height: 80px;
             box-shadow: 0 6px 8px 0 rgba(0,0,0,0.12),0 2px 4px 0 rgba(0,0,0,0.08);
-                ul li {
-                    padding: 30px;
-                    transition: padding 0.2s;
-                }
+                ul {
+                    li {
+                        padding: 30px;
+                        transition: padding 0.2s;
+                        a {
+                            color: black;
+                        }
+                    }    
+                } 
         }
         .heroBanner {
             display: flex;
@@ -215,7 +221,7 @@ body {
         h3 {
             // color: #ae974f;
             color: #1b2540;
-            font-family: 'Roboto-Bold', 'sans-serif';
+            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             // border-bottom: 1px solid #ae974f;
@@ -264,7 +270,7 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            font-family: 'Roboto-Bold', 'sans-serif';
+            // font-family: 'Roboto-Bold', 'sans-serif';
         }
         .intro {
             display: flex;
@@ -343,7 +349,7 @@ body {
             h3 {
                 // color: #ae974f;
                 color: #1b2540;
-                font-family: 'Roboto-Bold', 'sans-serif';
+                // font-family: 'Roboto-Bold', 'sans-serif';
                 // border-bottom: 1px solid #ae974f;
                 // text-transform: uppercase;
                 font-size: 1.8rem;
@@ -401,7 +407,7 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            font-family: 'Roboto-Bold', 'sans-serif';
+            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             padding-top: 5%;
@@ -458,7 +464,7 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            font-family: 'Roboto-Bold', 'sans-serif';
+            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             text-align: center;
@@ -468,11 +474,20 @@ body {
             //Jak zrobic zeby bylo gucci?
             width: 50%;
             // margin: 0 auto;
+            // .owl-nav {
+            //     display: flex;
+            //     font-size: 20vh;
+            //     position: absolute;
+            //     top: 0;
+            //     // button {
+            //     //     position: absolute;
+            //     // }
+            // }
             .sliderItem {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                width:200px;
+                // width:200px;
                 height: 200px;
                 img {
                     filter: grayscale(100%);
@@ -496,7 +511,7 @@ body {
             /*Small refactor below*/
             padding-top: 5%;
             text-align: center;
-            font-family: 'Roboto-Bold', 'sans-serif';
+            // font-family: 'Roboto-Bold', 'sans-serif';
             // border-bottom: 1px solid #ae974f;
             // text-transform: uppercase;
             font-size: 1.8rem;
@@ -544,6 +559,33 @@ body {
         }
     }
 }
+@media only screen and (min-width: 500px) {
+    body header .heroBanner {
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    body {
+        header {
+            .heroBanner {
+            align-items: center;
+            background-image: none;
+            background-color: #1b2540;
+            .headerIntroContainer {
+                color: white;
+                text-align: center;
+                img {
+                    height: 150px;
+                    width: 150px;
+                    margin-top: 35px;
+                }    
+            }
+            
+        }    
+        }
+    }
+    
+}
 @media only screen and (max-width: 768px) {
     body {
         header {
@@ -552,21 +594,21 @@ body {
                     display: none;
                 }    
             }
-            .heroBanner {
-                align-items: center;
-                background-image: none;
-                background-color: #1b2540;
-                .headerIntroContainer {
-                    color: white;
-                    text-align: center;
-                    img {
-                        height: 150px;
-                        width: 150px;
-                        margin-top: 35px;
-                    }    
-                }
+            // .heroBanner {
+            //     align-items: center;
+            //     background-image: none;
+            //     background-color: #1b2540;
+            //     .headerIntroContainer {
+            //         color: white;
+            //         text-align: center;
+            //         img {
+            //             height: 150px;
+            //             width: 150px;
+            //             margin-top: 35px;
+            //         }    
+            //     }
                 
-            }
+            // }
         }
         .partners {
             .owl-carousel {
@@ -602,6 +644,9 @@ body {
         
         footer {
             .footerContentContainer {
+                div {
+                    margin:  auto;
+                }
                 .footerNavigation {
                     display: none;
                 }    
@@ -612,3 +657,13 @@ body {
     }
     
 }
+@media only screen and (min-width: 1600px) {
+    body header .heroBanner {
+        height: 80vh;
+    }
+}
+// @media only screen and (min-width: 500px) {
+//     body header .heroBanner {
+//         height: 50vh;
+//     }
+// }

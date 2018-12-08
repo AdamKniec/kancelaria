@@ -18,7 +18,8 @@ body {
     position: relative;
     display: flex;
     padding-bottom: 4%;
-    justify-content: center; }
+    justify-content: center;
+    font-family: 'TrajanPro-Bold'; }
     body h3::after {
       content: '';
       background-color: #ae974f;
@@ -54,7 +55,7 @@ body {
           transition: padding 0.2s; }
           body header .navbar ul li a {
             text-decoration: none;
-            color: black; }
+            color: white; }
       body header .navbar .languageSwitcher {
         width: 30px;
         height: 20px;
@@ -76,6 +77,8 @@ body {
       body header .sticky ul li {
         padding: 30px;
         transition: padding 0.2s; }
+        body header .sticky ul li a {
+          color: black; }
     body header .heroBanner {
       display: flex;
       flex-direction: column;
@@ -114,7 +117,6 @@ body {
     align-items: center; }
     body .aboutUs h3 {
       color: #1b2540;
-      font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem; }
     body .aboutUs .contentContainer {
       display: flex;
@@ -146,8 +148,7 @@ body {
     body .offer h3 {
       /*powtarzalne style wyjebac na gore*/
       font-size: 1.8rem;
-      color: #1b2540;
-      font-family: 'Roboto-Bold', 'sans-serif'; }
+      color: #1b2540; }
     body .offer .intro {
       display: flex;
       flex-direction: column;
@@ -206,7 +207,6 @@ body {
       text-align: center; }
       body .team .teamIntro h3 {
         color: #1b2540;
-        font-family: 'Roboto-Bold', 'sans-serif';
         font-size: 1.8rem; }
       body .team .teamIntro p {
         font-size: 1.7rem; }
@@ -246,7 +246,6 @@ body {
     padding-bottom: 5%; }
     body .contactForm h3 {
       color: #1b2540;
-      font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem;
       padding-top: 5%; }
     body .contactForm .form {
@@ -288,7 +287,6 @@ body {
     align-items: center; }
     body .partners h3 {
       color: #1b2540;
-      font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem;
       text-align: center;
       padding-top: 5%; }
@@ -298,7 +296,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 200px;
         height: 200px; }
         body .partners .owl-carousel .sliderItem img {
           filter: grayscale(100%);
@@ -317,7 +314,6 @@ body {
       /*Small refactor below*/
       padding-top: 5%;
       text-align: center;
-      font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem;
       padding-top: 5%;
       width: 110px; }
@@ -347,9 +343,10 @@ body {
     text-align: center;
     opacity: 0.5; }
 
-@media only screen and (max-width: 768px) {
-  body header .navbar ul {
-    display: none; }
+@media only screen and (min-width: 500px) {
+  body header .heroBanner {
+    height: 50vh; } }
+@media only screen and (max-width: 1000px) {
   body header .heroBanner {
     align-items: center;
     background-image: none;
@@ -360,7 +357,10 @@ body {
       body header .heroBanner .headerIntroContainer img {
         height: 150px;
         width: 150px;
-        margin-top: 35px; }
+        margin-top: 35px; } }
+@media only screen and (max-width: 768px) {
+  body header .navbar ul {
+    display: none; }
   body .partners .owl-carousel .sliderItem {
     width: auto; }
   body .offer .intro .offerDescription {
@@ -374,7 +374,12 @@ body {
       font-size: 1.4rem; }
   body .team .membersContainer {
     justify-content: center; }
+  body footer .footerContentContainer div {
+    margin: auto; }
   body footer .footerContentContainer .footerNavigation {
     display: none; } }
+@media only screen and (min-width: 1600px) {
+  body header .heroBanner {
+    height: 80vh; } }
 
 /*# sourceMappingURL=style.css.map */

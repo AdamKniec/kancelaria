@@ -11,10 +11,29 @@
     font-family: 'Roboto-Light';
     src: url('/fonts/Roboto-Light.ttf');
 }
+@font-face {
+    font-family: 'TrajanPro-Bold';
+    src: url('/fonts/TrajanPro-Bold.otf');
+}
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto-Light', 'sans-serif';
+    // styling the h3. Style common for the whole document
+    h3 {
+        position: relative;
+        display: flex;
+        padding-bottom: 4%;
+        justify-content: center;
+        &::after {
+            content: '';
+            background-color: #ae974f;
+            height: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+        }
+    }
     header {
         box-shadow: 0 6px 8px 0 rgba(0,0,0,0.12),0 2px 4px 0 rgba(0,0,0,0.08);
         .navbar {
@@ -99,7 +118,7 @@ body {
                 align-items: center;
                 margin-top: 5%;
                 h1 {
-                    font-family: serif;
+                    font-family: 'TrajanPro-Bold';
                     margin-bottom: 0;
                 }
                 p {
@@ -199,24 +218,28 @@ body {
             font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
-            border-bottom: 1px solid #ae974f;
+            // border-bottom: 1px solid #ae974f;
         }
         .contentContainer {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             .description {
-                max-width: 600px;
+                max-width: 800px;
+                margin-bottom: 50px;
                 font-family: 'Roboto-Light', 'sans-serif';
                 .boldIntro {
                     font-family: 'Roboto-Regular', 'sans-serif';
-                    font-size: 1.3rem;
+                    font-size: 1.7rem;
                 }
             }  
             .values {
                 display: flex;
                 flex-wrap: wrap;
-                max-width: 600px;
+                // max-width: 600px;
+                justify-content: center;
                 figure {
-                    width: 200px;
+                    max-width: 200px;
                     img {
                         width: 50px;
                         height: 50px;
@@ -240,7 +263,7 @@ body {
             // text-transform: uppercase;
             // color: #ae974f;
             color: #1b2540;
-            border-bottom: 1px solid #ae974f;
+            // border-bottom: 1px solid #ae974f;
             font-family: 'Roboto-Bold', 'sans-serif';
         }
         .intro {
@@ -254,12 +277,15 @@ body {
             .offerDescription {
                 text-align: center;
                 width: 50%;
+                font-size: 1.7rem;
             }
         }
         .offerContainer {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            max-width: 1240px;
+            margin: 0 auto;
+            justify-content: center;
             div {
                 width: 250px;
                 height: 250px;
@@ -272,7 +298,8 @@ body {
                 &:hover {
                     box-shadow: 0 0 50px rgba(33,33,33,.2);
                     transition: 0.2s;
-                    
+                    // transform: scale(1.1);
+                    // cursor: pointer;
                 }
                 // &:hover h4 {
                 //     border-bottom: 1px solid #ae974f;
@@ -317,9 +344,12 @@ body {
                 // color: #ae974f;
                 color: #1b2540;
                 font-family: 'Roboto-Bold', 'sans-serif';
-                border-bottom: 1px solid #ae974f;
+                // border-bottom: 1px solid #ae974f;
                 // text-transform: uppercase;
                 font-size: 1.8rem;
+            }
+            p {
+                font-size: 1.7rem;
             }
         }
         .membersContainer {
@@ -328,7 +358,7 @@ body {
             flex-wrap: wrap;
             .teamMemberBox {
                 margin: 10px;
-                width: 260px;
+                width: 270px;
                 text-align: center;
                 .memberDetails {
                     width: auto;
@@ -370,7 +400,7 @@ body {
         h3 {
             // color: #ae974f;
             color: #1b2540;
-            border-bottom: 1px solid #ae974f;
+            // border-bottom: 1px solid #ae974f;
             font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
@@ -427,7 +457,7 @@ body {
         h3 {
             // color: #ae974f;
             color: #1b2540;
-            border-bottom: 1px solid #ae974f;
+            // border-bottom: 1px solid #ae974f;
             font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
@@ -466,9 +496,8 @@ body {
             /*Small refactor below*/
             padding-top: 5%;
             text-align: center;
-            color: #ae974f;
             font-family: 'Roboto-Bold', 'sans-serif';
-            border-bottom: 1px solid #ae974f;
+            // border-bottom: 1px solid #ae974f;
             // text-transform: uppercase;
             font-size: 1.8rem;
             padding-top: 5%;
@@ -486,7 +515,7 @@ body {
                 margin: 40px;
             }
             .companySummary {
-                width: 300px;
+                width: 240px;
                 .footerDescriptionInfo {
                     display: flex;
                     margin: 0;
@@ -499,7 +528,7 @@ body {
                     
                 }
             }
-            .navigation {
+            .footerNavigation {
                 ul {
                     list-style-type: none;
                     text-align: center;
@@ -514,4 +543,72 @@ body {
             opacity: 0.5;
         }
     }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        header {
+            .navbar {
+                ul {
+                    display: none;
+                }    
+            }
+            .heroBanner {
+                align-items: center;
+                background-image: none;
+                background-color: #1b2540;
+                .headerIntroContainer {
+                    color: white;
+                    text-align: center;
+                    img {
+                        height: 150px;
+                        width: 150px;
+                        margin-top: 35px;
+                    }    
+                }
+                
+            }
+        }
+        .partners {
+            .owl-carousel {
+                .sliderItem {
+                    width: auto;
+                }    
+            }
+            
+        }
+        .offer {
+            .intro {
+                .offerDescription {
+                    width: 80%;
+                    font-size: 1.4rem;
+                }    
+            }
+            
+            .offerContainer {
+                justify-content: center;
+            }    
+        }
+        .team {
+            .teamIntro {
+                width: 80%;
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+            .membersContainer {
+                justify-content: center;
+            }    
+        }
+        
+        footer {
+            .footerContentContainer {
+                .footerNavigation {
+                    display: none;
+                }    
+            }
+                
+        }
+            
+    }
+    
 }

@@ -7,10 +7,25 @@
 @font-face {
   font-family: 'Roboto-Light';
   src: url("/fonts/Roboto-Light.ttf"); }
+@font-face {
+  font-family: 'TrajanPro-Bold';
+  src: url("/fonts/TrajanPro-Bold.otf"); }
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto-Light', 'sans-serif'; }
+  body h3 {
+    position: relative;
+    display: flex;
+    padding-bottom: 4%;
+    justify-content: center; }
+    body h3::after {
+      content: '';
+      background-color: #ae974f;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      width: 50px; }
   body header {
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
     body header .navbar {
@@ -81,7 +96,7 @@ body {
         align-items: center;
         margin-top: 5%; }
         body header .heroBanner .headerIntroContainer h1 {
-          font-family: serif;
+          font-family: 'TrajanPro-Bold';
           margin-bottom: 0; }
         body header .heroBanner .headerIntroContainer p {
           text-transform: uppercase; }
@@ -100,22 +115,24 @@ body {
     body .aboutUs h3 {
       color: #1b2540;
       font-family: 'Roboto-Bold', 'sans-serif';
-      font-size: 1.8rem;
-      border-bottom: 1px solid #ae974f; }
+      font-size: 1.8rem; }
     body .aboutUs .contentContainer {
-      display: flex; }
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
       body .aboutUs .contentContainer .description {
-        max-width: 600px;
+        max-width: 800px;
+        margin-bottom: 50px;
         font-family: 'Roboto-Light', 'sans-serif'; }
         body .aboutUs .contentContainer .description .boldIntro {
           font-family: 'Roboto-Regular', 'sans-serif';
-          font-size: 1.3rem; }
+          font-size: 1.7rem; }
       body .aboutUs .contentContainer .values {
         display: flex;
         flex-wrap: wrap;
-        max-width: 600px; }
+        justify-content: center; }
         body .aboutUs .contentContainer .values figure {
-          width: 200px; }
+          max-width: 200px; }
           body .aboutUs .contentContainer .values figure img {
             width: 50px;
             height: 50px; }
@@ -130,7 +147,6 @@ body {
       /*powtarzalne style wyjebac na gore*/
       font-size: 1.8rem;
       color: #1b2540;
-      border-bottom: 1px solid #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif'; }
     body .offer .intro {
       display: flex;
@@ -141,11 +157,14 @@ body {
         font-family: 'Roboto-Regular', 'sans-serif'; }
       body .offer .intro .offerDescription {
         text-align: center;
-        width: 50%; }
+        width: 50%;
+        font-size: 1.7rem; }
     body .offer .offerContainer {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      max-width: 1240px;
+      margin: 0 auto;
+      justify-content: center; }
       body .offer .offerContainer div {
         width: 250px;
         height: 250px;
@@ -188,15 +207,16 @@ body {
       body .team .teamIntro h3 {
         color: #1b2540;
         font-family: 'Roboto-Bold', 'sans-serif';
-        border-bottom: 1px solid #ae974f;
         font-size: 1.8rem; }
+      body .team .teamIntro p {
+        font-size: 1.7rem; }
     body .team .membersContainer {
       display: flex;
       align-items: center;
       flex-wrap: wrap; }
       body .team .membersContainer .teamMemberBox {
         margin: 10px;
-        width: 260px;
+        width: 270px;
         text-align: center; }
         body .team .membersContainer .teamMemberBox .memberDetails {
           width: auto; }
@@ -226,7 +246,6 @@ body {
     padding-bottom: 5%; }
     body .contactForm h3 {
       color: #1b2540;
-      border-bottom: 1px solid #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem;
       padding-top: 5%; }
@@ -269,7 +288,6 @@ body {
     align-items: center; }
     body .partners h3 {
       color: #1b2540;
-      border-bottom: 1px solid #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif';
       font-size: 1.8rem;
       text-align: center;
@@ -299,9 +317,7 @@ body {
       /*Small refactor below*/
       padding-top: 5%;
       text-align: center;
-      color: #ae974f;
       font-family: 'Roboto-Bold', 'sans-serif';
-      border-bottom: 1px solid #ae974f;
       font-size: 1.8rem;
       padding-top: 5%;
       width: 110px; }
@@ -314,7 +330,7 @@ body {
       body footer .footerContentContainer div {
         margin: 40px; }
       body footer .footerContentContainer .companySummary {
-        width: 300px; }
+        width: 240px; }
         body footer .footerContentContainer .companySummary .footerDescriptionInfo {
           display: flex;
           margin: 0;
@@ -323,12 +339,42 @@ body {
             width: 50px;
             height: 40px;
             padding-right: 10px; }
-      body footer .footerContentContainer .navigation ul {
+      body footer .footerContentContainer .footerNavigation ul {
         list-style-type: none;
         text-align: center;
         padding: 0; }
   body .copyrightContainer p {
     text-align: center;
     opacity: 0.5; }
+
+@media only screen and (max-width: 768px) {
+  body header .navbar ul {
+    display: none; }
+  body header .heroBanner {
+    align-items: center;
+    background-image: none;
+    background-color: #1b2540; }
+    body header .heroBanner .headerIntroContainer {
+      color: white;
+      text-align: center; }
+      body header .heroBanner .headerIntroContainer img {
+        height: 150px;
+        width: 150px;
+        margin-top: 35px; }
+  body .partners .owl-carousel .sliderItem {
+    width: auto; }
+  body .offer .intro .offerDescription {
+    width: 80%;
+    font-size: 1.4rem; }
+  body .offer .offerContainer {
+    justify-content: center; }
+  body .team .teamIntro {
+    width: 80%; }
+    body .team .teamIntro p {
+      font-size: 1.4rem; }
+  body .team .membersContainer {
+    justify-content: center; }
+  body footer .footerContentContainer .footerNavigation {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

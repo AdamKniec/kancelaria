@@ -1,19 +1,19 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('/fonts/Roboto-Regular.ttf');
+    src: url('/kancelaria/fonts/Roboto-Regular.ttf');
 }
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url('/fonts/Roboto-Bold.ttf');
-}
+// @font-face {
+//     font-family: 'Roboto-Bold';
+//     src: url('/fonts/Roboto-Bold.ttf');
+// }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('/fonts/Roboto-Light.ttf');
+    src: url('/kancelaria/fonts/Roboto-Light.ttf');
 }
 @font-face {
     font-family: 'TrajanPro-Bold';
-    src: url('/fonts/TrajanPro-Bold.otf');
+    src: url('/kancelaria/fonts/TrajanPro-Bold.otf');
 }
 body {
     margin: 0;
@@ -65,7 +65,7 @@ body {
                     transition: padding 0.2s;
                     a {
                         text-decoration: none;
-                        color: white;
+                        color: black;
                     }
                 }
             }
@@ -92,14 +92,9 @@ body {
             // opacity: 0.9;
             height: 80px;
             box-shadow: 0 6px 8px 0 rgba(0,0,0,0.12),0 2px 4px 0 rgba(0,0,0,0.08);
-                ul {
-                    li {
+                ul li {
                         padding: 30px;
                         transition: padding 0.2s;
-                        a {
-                            color: black;
-                        }
-                    }    
                 } 
         }
         .heroBanner {
@@ -110,7 +105,7 @@ body {
             background-size:contain;
             background-position:center;
             // align-items: center;
-            background: url("/imgs/header-minified.jpg");
+            background: url("/kancelaria/imgs/header-minified.jpg");
             background-size: cover;
             height: 80vh;
             background-position: center;
@@ -282,7 +277,7 @@ body {
             }
             .offerDescription {
                 text-align: center;
-                width: 50%;
+                width: 35%;
                 font-size: 1.7rem;
             }
         }
@@ -366,16 +361,22 @@ body {
                 margin: 10px;
                 width: 270px;
                 text-align: center;
+                img {
+                    width: 100%;
+                    height: 400px;
+                }
                 .memberDetails {
                     width: auto;
                     .name {
-                        font-family: 'Roboto-Bold', 'sans-serif';
+                        font-family: 'Roboto-Regular', 'sans-serif';
+                        font-weight: bold;
                     }
                     .role {
                         font-family: 'Roboto-Regular', 'sans-serif';
                         color: #ae974f;
                     }
                     .socialMedia {
+                        // position: relative;
                         img {
                             width: 30px;
                             height: 30px;
@@ -388,10 +389,7 @@ body {
                         }
                     }
                 }
-                img {
-                    width: 100%;
-                    height: 400px;
-                }
+                
             }
         }
     }
@@ -489,6 +487,7 @@ body {
                 justify-content: center;
                 // width:200px;
                 height: 200px;
+                width: 200px;
                 img {
                     filter: grayscale(100%);
                     transition:  1s;
@@ -547,7 +546,15 @@ body {
                 ul {
                     list-style-type: none;
                     text-align: center;
-                    padding: 0;    
+                    padding: 0;
+                    li {
+                        padding-bottom: 15px;
+                        a {
+                            list-style-type: none;
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
                 }
             }
         }
@@ -559,14 +566,38 @@ body {
         }
     }
 }
-@media only screen and (min-width: 500px) {
+//!!!!!!!!!!!!!!!!!!!!!!!!!MEDIA QUERIES!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media only screen and (min-height: 1000px) {
     body header .heroBanner {
-        height: 50vh;
+        height:50vh;
     }
 }
+// IPAD PRO FIX
+// @media only screen and (width:1024px) {
+//     body header .heroBanner {
+//                 height:50vh;
+//             }
+// }
 @media only screen and (max-width: 1000px) {
     body {
         header {
+            .navbar {
+                ul li a {
+                    color: white;
+                }
+            }
+            .sticky {
+                ul {
+                    li {
+                       a {
+                    color: black;
+                } 
+                    }
+                    
+                }
+                
+            }
             .heroBanner {
             align-items: center;
             background-image: none;
@@ -594,21 +625,6 @@ body {
                     display: none;
                 }    
             }
-            // .heroBanner {
-            //     align-items: center;
-            //     background-image: none;
-            //     background-color: #1b2540;
-            //     .headerIntroContainer {
-            //         color: white;
-            //         text-align: center;
-            //         img {
-            //             height: 150px;
-            //             width: 150px;
-            //             margin-top: 35px;
-            //         }    
-            //     }
-                
-            // }
         }
         .partners {
             .owl-carousel {
@@ -645,7 +661,7 @@ body {
         footer {
             .footerContentContainer {
                 div {
-                    margin:  auto;
+                    margin:  0;
                 }
                 .footerNavigation {
                     display: none;
@@ -662,8 +678,126 @@ body {
         height: 80vh;
     }
 }
-// @media only screen and (min-width: 500px) {
-//     body header .heroBanner {
-//         height: 50vh;
-//     }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Styling the first employee page
+.employee-page {
+    .navbar {
+        display: flex;
+        // justify-content: space-around;ś
+        align-items: center;
+        background-color: transparent;
+        padding-top: 10px;
+        transition: all 0.2s;
+        height: 100px;
+        // position: absolute;
+        width: 100%;
+        margin-right: 10px;
+        z-index: 999;
+        .logo {
+            padding-left: 10px;
+            width: 60px;
+            height: 50px;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin:0;
+            li {
+                padding: 20px;
+                font-size: 1rem;
+                transition: padding 0.2s;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        .languageSwitcher {
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            opacity: 0.5;
+            transition: 0.2s;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+    }
+    .employeeDetails {
+        display: flex;
+        justify-content: center;
+        div {
+            padding: 40px;
+        }
+        img {
+            height: 400px;
+
+        }
+        .employeeDescription {
+            max-width: 500px;
+            h4 {
+                font-family: 'TrajanPro-Bold';
+                position: relative;
+                display: flex;
+                padding-bottom: 4%;
+                margin-top: 0;
+                // justify-content: center;
+                &:after {
+                    content: '';
+                    background-color: #ae974f;
+                    height: 5px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+//EMPLOYEE PAGE MEDIA QUERIES
+@media only screen and (max-width: 950px) {
+    .employee-page {
+        .navbar ul {
+            display: none;
+        }
+        .employeeDetails {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .employeeDescription {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h4 {
+                    justify-content: center;
+                }
+            }
+        }    
+    }
+    
+}

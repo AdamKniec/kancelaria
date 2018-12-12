@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('/kancelaria/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/Roboto-Regular.ttf');
 }
 // @font-face {
 //     font-family: 'Roboto-Bold';
@@ -9,11 +9,11 @@
 // }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('/kancelaria/fonts/Roboto-Light.ttf');
+    src: url('/fonts/Roboto-Light.ttf');
 }
 @font-face {
     font-family: 'TrajanPro-Bold';
-    src: url('/kancelaria/fonts/TrajanPro-Bold.otf');
+    src: url('/fonts/TrajanPro-Bold.otf');
 }
 body {
     margin: 0;
@@ -25,12 +25,14 @@ body {
         display: flex;
         padding-bottom: 4%;
         justify-content: center;
+        
         font-family: 'TrajanPro-Bold';
         &::after {
             content: '';
+            position: absolute;
             background-color: #ae974f;
             height: 5px;
-            position: absolute;
+            
             bottom: 0;
             width: 50px;
         }
@@ -105,7 +107,7 @@ body {
             background-size:contain;
             background-position:center;
             // align-items: center;
-            background: url("/kancelaria/imgs/header-minified.jpg");
+            background: url("/imgs/header-minified.jpg");
             background-size: cover;
             height: 80vh;
             background-position: center;
@@ -439,6 +441,20 @@ body {
                     border-bottom:2px solid #ae974f
                 }
             }
+            .agreement {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                p span{
+                    text-decoration: underline;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .termsAgreement {
+                    width: 80px;
+                }
+            }
             button {
                 padding:8px 12px;
                 margin:8px 0 0;
@@ -452,6 +468,50 @@ body {
                     color:#fff
                 }
             }
+            .modal {
+                display: none; /* Hidden by default */
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: scroll; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 15% auto; /* 15% from the top and centered */
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Could be more or less, depending on screen size */
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                    animation-name: animatetop;
+                    animation-duration: 0.4s;
+                    height: 300px;
+                    overflow: scroll;
+                    .closeButton {
+                        color: #aaa;
+                        float: right;
+                        font-size: 28px;
+                        font-weight: bold;
+                      }
+                      .modal-body {
+                            padding: 2px 16px;
+                        }
+                  }
+                  @keyframes animatetop {
+                    from {top: -300px; opacity: 0}
+                    to {top: 0; opacity: 1}
+                  }
+              }
+              @keyframes animatetop {
+                from {top: -300px; opacity: 0}
+                to {top: 0; opacity: 1}
+              }
         }
     }
     .partners {
@@ -471,6 +531,7 @@ body {
         .owl-carousel {
             //Jak zrobic zeby bylo gucci?
             width: 50%;
+            z-index: 2;
             // margin: 0 auto;
             // .owl-nav {
             //     display: flex;
@@ -569,9 +630,14 @@ body {
 //!!!!!!!!!!!!!!!!!!!!!!!!!MEDIA QUERIES!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media only screen and (min-height: 1000px) {
-    body header .heroBanner {
-        height:50vh;
+    body {
+        header {
+            .heroBanner {
+                height:50vh;    
+            }
+        }
     }
+
 }
 // IPAD PRO FIX
 // @media only screen and (width:1024px) {
@@ -682,71 +748,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Styling the first employee page
-.employee-page {
-    .navbar {
-        display: flex;
-        // justify-content: space-around;ś
-        align-items: center;
-        background-color: transparent;
-        padding-top: 10px;
-        transition: all 0.2s;
-        height: 100px;
-        // position: absolute;
-        width: 100%;
-        margin-right: 10px;
-        z-index: 999;
-        .logo {
-            padding-left: 10px;
-            width: 60px;
-            height: 50px;
-        }
-        ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            margin:0;
-            li {
-                padding: 20px;
-                font-size: 1rem;
-                transition: padding 0.2s;
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-        }
-        .languageSwitcher {
-            width: 30px;
-            height: 20px;
-            position: absolute;
-            right: 10px;
-            opacity: 0.5;
-            transition: 0.2s;
-            &:hover {
-                opacity: 1;
-                transform: scale(1.1);
-                transition: 0.2s;
-            }
-        }
-    }
     .employeeDetails {
         display: flex;
         justify-content: center;
@@ -777,13 +778,12 @@ body {
             }
         }
     }
-}
+
 //EMPLOYEE PAGE MEDIA QUERIES
-@media only screen and (max-width: 950px) {
-    .employee-page {
-        .navbar ul {
-            display: none;
-        }
+@media (max-width: 950px) {
+        // .navbar ul {
+        //     display: none;
+        // }
         .employeeDetails {
             flex-direction: column;
             justify-content: center;
@@ -798,6 +798,6 @@ body {
                 }
             }
         }    
-    }
+    
     
 }

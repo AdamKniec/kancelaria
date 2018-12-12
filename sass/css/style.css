@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/kancelaria/fonts/Roboto-Regular.ttf"); }
+  src: url("/fonts/Roboto-Regular.ttf"); }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("/kancelaria/fonts/Roboto-Light.ttf"); }
+  src: url("/fonts/Roboto-Light.ttf"); }
 @font-face {
   font-family: 'TrajanPro-Bold';
-  src: url("/kancelaria/fonts/TrajanPro-Bold.otf"); }
+  src: url("/fonts/TrajanPro-Bold.otf"); }
 body {
   margin: 0;
   padding: 0;
@@ -19,9 +19,9 @@ body {
     font-family: 'TrajanPro-Bold'; }
     body h3::after {
       content: '';
+      position: absolute;
       background-color: #ae974f;
       height: 5px;
-      position: absolute;
       bottom: 0;
       width: 50px; }
   body header {
@@ -81,7 +81,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background: url("/kancelaria/imgs/header-minified.jpg");
+      background: url("/imgs/header-minified.jpg");
       background-size: cover;
       height: 80vh;
       background-position: center; }
@@ -266,6 +266,16 @@ body {
         border-bottom: 2px solid black; }
         body .contactForm .form input:focus, body .contactForm .form textarea:focus {
           border-bottom: 2px solid #ae974f; }
+      body .contactForm .form .agreement {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center; }
+        body .contactForm .form .agreement p span {
+          text-decoration: underline; }
+          body .contactForm .form .agreement p span:hover {
+            cursor: pointer; }
+        body .contactForm .form .agreement .termsAgreement {
+          width: 80px; }
       body .contactForm .form button {
         padding: 8px 12px;
         margin: 8px 0 0;
@@ -277,6 +287,62 @@ body {
         body .contactForm .form button:hover {
           background: #78788c;
           color: #fff; }
+      body .contactForm .form .modal {
+        display: none;
+        /* Hidden by default */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: scroll;
+        /* Enable scroll if needed */
+        background-color: black;
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */ }
+        body .contactForm .form .modal .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          /* Could be more or less, depending on screen size */
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          animation-name: animatetop;
+          animation-duration: 0.4s;
+          height: 300px;
+          overflow: scroll; }
+          body .contactForm .form .modal .modal-content .closeButton {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold; }
+          body .contactForm .form .modal .modal-content .modal-body {
+            padding: 2px 16px; }
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
   body .partners {
     display: flex;
     flex-direction: column;
@@ -287,7 +353,8 @@ body {
       text-align: center;
       padding-top: 5%; }
     body .partners .owl-carousel {
-      width: 50%; }
+      width: 50%;
+      z-index: 2; }
       body .partners .owl-carousel .sliderItem {
         display: flex;
         flex-direction: column;
@@ -388,59 +455,22 @@ body {
 @media only screen and (min-width: 1600px) {
   body header .heroBanner {
     height: 80vh; } }
-.employee-page .navbar {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  padding-top: 10px;
-  transition: all 0.2s;
-  height: 100px;
-  width: 100%;
-  margin-right: 10px;
-  z-index: 999; }
-  .employee-page .navbar .logo {
-    padding-left: 10px;
-    width: 60px;
-    height: 50px; }
-  .employee-page .navbar ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0; }
-    .employee-page .navbar ul li {
-      padding: 20px;
-      font-size: 1rem;
-      transition: padding 0.2s; }
-      .employee-page .navbar ul li a {
-        text-decoration: none;
-        color: black; }
-  .employee-page .navbar .languageSwitcher {
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    right: 10px;
-    opacity: 0.5;
-    transition: 0.2s; }
-    .employee-page .navbar .languageSwitcher:hover {
-      opacity: 1;
-      transform: scale(1.1);
-      transition: 0.2s; }
-.employee-page .employeeDetails {
+.employeeDetails {
   display: flex;
   justify-content: center; }
-  .employee-page .employeeDetails div {
+  .employeeDetails div {
     padding: 40px; }
-  .employee-page .employeeDetails img {
+  .employeeDetails img {
     height: 400px; }
-  .employee-page .employeeDetails .employeeDescription {
+  .employeeDetails .employeeDescription {
     max-width: 500px; }
-    .employee-page .employeeDetails .employeeDescription h4 {
+    .employeeDetails .employeeDescription h4 {
       font-family: 'TrajanPro-Bold';
       position: relative;
       display: flex;
       padding-bottom: 4%;
       margin-top: 0; }
-      .employee-page .employeeDetails .employeeDescription h4:after {
+      .employeeDetails .employeeDescription h4:after {
         content: '';
         background-color: #ae974f;
         height: 5px;
@@ -448,19 +478,17 @@ body {
         bottom: 0;
         width: 50px; }
 
-@media only screen and (max-width: 950px) {
-  .employee-page .navbar ul {
-    display: none; }
-  .employee-page .employeeDetails {
+@media (max-width: 950px) {
+  .employeeDetails {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .employee-page .employeeDetails .employeeDescription {
+    .employeeDetails .employeeDescription {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .employee-page .employeeDetails .employeeDescription h4 {
+      .employeeDetails .employeeDescription h4 {
         justify-content: center; } }
 
 /*# sourceMappingURL=style.css.map */

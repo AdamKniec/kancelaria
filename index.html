@@ -210,7 +210,6 @@
             </div>
             <div class="teamMemberBox">
                 <img src="imgs/member2.jpg" alt="">
-                <!-- <button>Więcej</button> -->
                 <div class="memberDetails">
                     <p class="name">Maciej Górny</p>
                     <p class="role">Radca Prawny</p>
@@ -236,58 +235,136 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="teamMemberBox">
-                <img src="imgs/fotka.jpg" alt="">
-                <div class="memberDetails">
-                    <p class="name">Adam Kniec</p>
-                    <p class="role">Web-Developer</p>
-                    <p class="memberDescription">Opisy oczywiscie bedziemy modyfokowac zgodnie z waszymi wymaganiami. Wrzucam tu jakikolwiek tekst zeby bylo mi latwiej projektowac</p>
-                    <div class="socialMedia">Tutaj beda ikonki social media</div>
-                </div>
-            </div> -->
         </div>
     </section>
     <section class="contactForm">
             <h3>Wyślij wiadomość</h2>
             <form class="form">
                 <label for="name">
-                    <input placeholder="Twoje Imię I nazwisko"></input>
+                    <input placeholder="Twoje Imię I nazwisko">
                 </label>
                 <label for="email">
-                    <input placeholder="Twój ades email"></input>    
+                    <input placeholder="Twój ades email">
                 </label>
                 <label for="message">
                     <textarea name="message" id="" cols="30" placeholder="w czym mozemy pomóć?" rows="10"></textarea>    
                 </label>
-                <button>Send Message</button>
+                <label for="agreement" class="agreement">
+                    <p>Wyrazam zgode na przetwarzanie moich danych osobowych zgodnie z  <span class="termsTrigger">regulaminem</span></p>
+                    <input type="checkbox" class="termsAgreement">
+                </label>
+                <button class="submitButton">Wyślij</button>
+                <div class="modal">
+                    <div class="modal-content">
+                      <span class="closeButton">&times;</span>
+                      <p>
+                          <h5>INFORMACJA O PRZETWARZANIU DANYCH OSOBOWYCH</h5>
+                          <p>Zgodnie z art. 13 ust. 1 i 2 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679
+                            z dnia 27 kwietnia 2016 roku w sprawie ochrony osób fizycznych w związku
+                            z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz
+                            uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych – danej zwanej
+                            „RODO”) informujemy, że:</p>
+                            <ol>
+                                <li>Administratorami danych osobowych są Michał Koczan prowadzący działalność
+                                    gospodarczą pod firmą Kancelaria Radcy Prawnego Michał Koczan, adres: ul. Traugutta
+                                    38b/95, 61 – 514 Poznań, oraz Maciej Górny prowadzący działalność gospodarczą pod
+                                    firmą Kancelaria Radcy Prawnego Maciej Górny, adres: ul. Różana 19/81, 61-577
+                                    Poznań;</li>
+                                <li>Administratorami danych osobowych są Michał Koczan prowadzący działalność
+                                    gospodarczą pod firmą Kancelaria Radcy Prawnego Michał Koczan, adres: ul. Traugutta
+                                    38b/95, 61 – 514 Poznań, oraz Maciej Górny prowadzący działalność gospodarczą pod
+                                    firmą Kancelaria Radcy Prawnego Maciej Górny, adres: ul. Różana 19/81, 61-577
+                                    Poznań;</li>
+                                <li>Pani/Pana dane osobowe przetwarzane będą przez Administratorów na podstawie art. 6
+                                    ust. 1 lit. a RODO, a ich podanie jest dobrowolne, aczkolwiek niezbędne w celu
+                                    udzielenia odpowiedzi na wiadomość wysłaną przez Panią/Pana za pośrednictwem
+                                    formularza kontaktowego na stronie internetowej www.kgrp.pl, prowadzenia dalszej
+                                    korespondencji lub kontaktu telefonicznego;</li>
+                                <li>Pani/Pana dane osobowe mogą być przetwarzane przez Administratorów również na
+                                    podstawie art. 6 ust. 1 lit. f RODO w celach wynikających z prawnie uzasadnionych
+                                    interesów realizowanych przez Administratorów związanych z ustalaniem,
+                                    dochodzeniem i obroną roszczeń.</li>
+                                <li>odbiorcą Pani/Pana danych osobowych będą jedynie upoważnieni współpracownicy
+                                    Administratorów lub w razie potrzeby również podmioty, z usług których Administratorzy
+                                    korzystają przy prowadzeniu działalności gospodarczej, z zastrzeżeniem przetwarzania
+                                    danych osobowych przez te podmioty zgodnie z RODO;</li>
+                                <li>Pani/Pana dane osobowe będą przechowywane przez okres nie dłuższy niż 3 miesiące
+                                    od dnia wymiany ostatniej korespondencji pomiędzy Panią/Panem a Administratorami;</li>
+                                <li>w odniesieniu do Pani/Pana danych osobowych, decyzje nie będą podejmowane w
+                                    sposób zautomatyzowany, stosownie do art. 22 RODO;</li>
+                                <li>Pani/Pana dane osobowe nie będą przekazywane do państwa trzeciego ani organizacji
+                                    międzynarodowej;</li>
+                                <li>posiada Pani/Pan:
+                                    <ul>
+                                        <li>na podstawie art. 15 ust. 1 RODO prawo dostępu do swoich danych osobowych;</li>
+                                        <li>na postawie art. 16 RODO prawo do sprostowania swoich danych osobowych;</li>
+                                        <li>na podstawie art. 17 ust. 1 RODO prawo żądania od Administratorów
+                                            niezwłocznego usunięcia swoich danych osobowych w przypadku zaistnienia
+                                            którejkolwiek z okoliczności wymienionych w tym przepisie, w zakresie w jakim
+                                            przetwarzanie Pani/Pana danych osobowych nie jest niezbędne do ustalenia,
+                                            dochodzenia lub obrony roszczeń;</li>
+                                        <li>na podstawie art. 18 ust. 1 RODO prawo żądania od administratora ograniczenia
+                                            przetwarzania danych osobowych z zastrzeżeniem przypadków, o których mowa
+                                            w art. 18 ust. 2 RODO;</li>
+                                        <li>prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, gdy
+                                            uzna Pani/Pan, że przetwarzanie danych osobowych narusza przypisy RODO;</li>
+                                        <li>prawo do przenoszenia danych osobowych, o którym mowa w art. 20 RODO;</li>
+                                    </ul>
+                                </li>
+                                <li>Nie przysługuje Pani/Panu:
+                                    <ul>
+                                        <li>na podstawie art. 21 ust. 1 RODO prawo sprzeciwu, wobec przetwarzania danych
+                                        osobowych, gdyż podstawą prawną przetwarzania Pani/Pana danych osobowych
+                                        jest art. 6 ust. 1 lit. a RODO.</li>
+                                        </ul>
+                                </li>
+                            </ol>
+                      </p>
+                    </div>
+                  </div>
             </form>
     </section>
     <section class="partners" id="partners">
         <h3>Zaufali nam</h3>
         <div class="owl-carousel">
             <div class="sliderItem">
-                <img src="imgs/logoEtuo.png" alt="">
+                <a href="https://www.etuo.pl">
+                    <img src="imgs/logoEtuo.png" alt="">
+                </a>
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoProfiSklep.jpg" alt="">
+                <a href="https://profisklep.com.pl">
+                    <img src="imgs/logoProfiSklep.jpg" alt="">
+                </a>
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoSzkolaTenisa.jpg" alt="">
+                <a href="https://www.facebook.com/SzkolaTenisaTP/">
+                    <img src="imgs/logoSzkolaTenisa.jpg" alt="">
+                </a>
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoSay.png" alt="">
+                <a href="https://www.facebook.com/say.poznan/">
+                    <img src="imgs/logoSay.png" alt="">
+                </a>
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoDesignPrestige.jpg" alt="">
+                <a href="https://www.facebook.com/Design-Prestige-Toru%C5%84-167356260032478/">
+                    <img src="imgs/logoDesignPrestige.jpg" alt="">
+                </a>
+                
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoDesignInside.jpg" alt="">
+                <a href="http://www.designinside.pl/">
+                    <img src="imgs/logoDesignInside.jpg" alt="">
+                </a>
             </div>
             <div class="sliderItem">
                 <img src="imgs/logoDBOutsourcing.jpg" alt="">
             </div>
             <div class="sliderItem">
-                <img src="imgs/logoSafelog.jpg" alt="">
+                <a href="https://safelog.pl">
+                    <img src="imgs/logoSafelog.jpg" alt="">
+                </a>
             </div>
             <div class="sliderItem">
                 <img src="imgs/logoWitex.jpg" alt="">
@@ -328,11 +405,13 @@
         </div>
         
     </footer>
+    <script src="script.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script src="owlcarousel/dist/owl.carousel.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="/carousel.js"></script>
 </body>
 </html>

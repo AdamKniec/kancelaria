@@ -13,17 +13,18 @@ body {
   font-family: 'Roboto-Light', 'sans-serif'; }
   body h3 {
     position: relative;
-    display: flex;
-    padding-bottom: 4%;
+    display: block;
     justify-content: center;
     font-family: 'TrajanPro-Bold'; }
     body h3::after {
       content: '';
-      position: absolute;
       background-color: #ae974f;
+      display: block;
       height: 5px;
       bottom: 0;
-      width: 50px; }
+      width: 50px;
+      margin: 0 auto;
+      margin-top: 30px; }
   body header {
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08); }
     body header .navbar {
@@ -208,6 +209,7 @@ body {
     body .team .membersContainer {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap; }
       body .team .membersContainer .teamMemberBox {
         margin: 10px;
@@ -353,8 +355,7 @@ body {
       text-align: center;
       padding-top: 5%; }
     body .partners .owl-carousel {
-      width: 50%;
-      z-index: 2; }
+      width: 50%; }
       body .partners .owl-carousel .sliderItem {
         display: flex;
         flex-direction: column;
@@ -379,8 +380,7 @@ body {
       padding-top: 5%;
       text-align: center;
       font-size: 1.8rem;
-      padding-top: 5%;
-      width: 110px; }
+      padding-top: 5%; }
     body footer .footerContentContainer {
       display: flex;
       justify-content: center;
@@ -472,9 +472,9 @@ body {
       margin-top: 0; }
       .employeeDetails .employeeDescription h4:after {
         content: '';
+        position: absolute;
         background-color: #ae974f;
         height: 5px;
-        position: absolute;
         bottom: 0;
         width: 50px; }
 

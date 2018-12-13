@@ -3,10 +3,6 @@
     font-family: 'Roboto-Regular';
     src: url('/fonts/Roboto-Regular.ttf');
 }
-// @font-face {
-//     font-family: 'Roboto-Bold';
-//     src: url('/fonts/Roboto-Bold.ttf');
-// }
 @font-face {
     font-family: 'Roboto-Light';
     src: url('/fonts/Roboto-Light.ttf');
@@ -22,19 +18,18 @@ body {
     // styling the h3. Style common for the whole document
     h3 {
         position: relative;
-        display: flex;
-        padding-bottom: 4%;
+        display: block;
         justify-content: center;
-        
         font-family: 'TrajanPro-Bold';
         &::after {
             content: '';
-            position: absolute;
             background-color: #ae974f;
+            display: block;
             height: 5px;
-            
             bottom: 0;
             width: 50px;
+            margin: 0 auto;
+            margin-top: 30px;
         }
     }
     header {
@@ -218,7 +213,6 @@ body {
         h3 {
             // color: #ae974f;
             color: #1b2540;
-            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             // border-bottom: 1px solid #ae974f;
@@ -267,7 +261,6 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            // font-family: 'Roboto-Bold', 'sans-serif';
         }
         .intro {
             display: flex;
@@ -346,7 +339,6 @@ body {
             h3 {
                 // color: #ae974f;
                 color: #1b2540;
-                // font-family: 'Roboto-Bold', 'sans-serif';
                 // border-bottom: 1px solid #ae974f;
                 // text-transform: uppercase;
                 font-size: 1.8rem;
@@ -358,6 +350,7 @@ body {
         .membersContainer {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
             .teamMemberBox {
                 margin: 10px;
@@ -407,7 +400,6 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             padding-top: 5%;
@@ -522,7 +514,6 @@ body {
             // color: #ae974f;
             color: #1b2540;
             // border-bottom: 1px solid #ae974f;
-            // font-family: 'Roboto-Bold', 'sans-serif';
             // text-transform: uppercase;
             font-size: 1.8rem;
             text-align: center;
@@ -531,22 +522,10 @@ body {
         .owl-carousel {
             //Jak zrobic zeby bylo gucci?
             width: 50%;
-            z-index: 2;
-            // margin: 0 auto;
-            // .owl-nav {
-            //     display: flex;
-            //     font-size: 20vh;
-            //     position: absolute;
-            //     top: 0;
-            //     // button {
-            //     //     position: absolute;
-            //     // }
-            // }
             .sliderItem {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // width:200px;
                 height: 200px;
                 width: 200px;
                 img {
@@ -571,14 +550,9 @@ body {
             /*Small refactor below*/
             padding-top: 5%;
             text-align: center;
-            // font-family: 'Roboto-Bold', 'sans-serif';
-            // border-bottom: 1px solid #ae974f;
-            // text-transform: uppercase;
             font-size: 1.8rem;
             padding-top: 5%;
-            width: 110px;
         }
-        
         .footerContentContainer {
             display: flex;
             justify-content: center;
@@ -639,12 +613,6 @@ body {
     }
 
 }
-// IPAD PRO FIX
-// @media only screen and (width:1024px) {
-//     body header .heroBanner {
-//                 height:50vh;
-//             }
-// }
 @media only screen and (max-width: 1000px) {
     body {
         header {
@@ -769,9 +737,9 @@ body {
                 // justify-content: center;
                 &:after {
                     content: '';
+                    position: absolute;
                     background-color: #ae974f;
                     height: 5px;
-                    position: absolute;
                     bottom: 0;
                     width: 50px;
                 }

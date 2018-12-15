@@ -40,3 +40,38 @@
         }
     })
 }());
+// Map handler
+(function(){
+    var map = L.map('mapContainer').setView([52.410090,16.933470], 18);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([52.410090,16.933470]).addTo(map)
+    .bindPopup("<img src=imgs/entrance.jpg alt = Zdjęcie wejcia style=width:200px; height: 200px;/>")
+    .openPopup();
+}());
+
+//Smooth scroll
+(function($) {
+    $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+    
+                var hash = this.hash;
+                var targetOffset = $(hash).offset().top - 80;
+                if(hash ==="#aboutUs"){
+                    targetOffset += 80;
+                }
+    
+                $('html, body').animate({
+                    scrollTop: targetOffset
+                }, 800, function(){
+    
+                });
+            }
+        });
+    });
+    })(jQuery);

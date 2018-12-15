@@ -37,7 +37,7 @@ body {
       position: absolute;
       width: 100%;
       margin-right: 10px;
-      z-index: 999; }
+      z-index: 9999; }
       body header .navbar .logo {
         padding-left: 10px;
         width: 60px;
@@ -468,7 +468,9 @@ body {
   body footer .footerContentContainer div {
     margin: 0; }
   body footer .footerContentContainer .footerNavigation {
-    display: none; } }
+    display: none; }
+  body footer .iconsSource {
+    width: 80%; } }
 @media only screen and (min-width: 1600px) {
   body header .heroBanner {
     height: 80vh; } }

@@ -83,7 +83,7 @@ L.marker([52.410090,16.933470]).addTo(map)
         if (e.target == hamburger) {
             navList.classList.toggle('mobile');
         } else {
-            navList.classList.toggle('mobile');
+            navList.classList.remove('mobile');
         }
     }
     document.body.addEventListener('click', toggleMenu);

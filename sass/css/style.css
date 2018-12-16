@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/fonts/Roboto-Regular.ttf"); }
+  src: url("/kancelaria/fonts/Roboto-Regular.ttf"); }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("/fonts/Roboto-Light.ttf"); }
+  src: url("/kancelaria/fonts/Roboto-Light.ttf"); }
 @font-face {
   font-family: 'TrajanPro-Bold';
-  src: url("/fonts/TrajanPro-Bold.otf"); }
+  src: url("/kancelaria/fonts/TrajanPro-Bold.otf"); }
 body {
   margin: 0;
   padding: 0;
@@ -114,7 +114,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background: url("/imgs/header-minified.jpg");
+      background: url("/kancelaria/imgs/header-minified.jpg");
       background-size: cover;
       height: 80vh;
       background-position: center; }

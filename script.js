@@ -75,3 +75,19 @@ L.marker([52.410090,16.933470]).addTo(map)
         });
     });
     })(jQuery);
+//Mobile navbar handler
+(function(){
+    let hamburger = document.querySelector('.hamburger');
+    let navList = document.querySelector('.navbar ul');
+    function toggleMenu (e) {
+        if (e.target == hamburger) {
+            navList.classList.toggle('mobile');
+        } else {
+            navList.classList.toggle('mobile');
+        }
+    }
+    document.body.addEventListener('click', toggleMenu);
+        // hamburger.addEventListener('click', ()=> {
+        //     navList.classList.toggle('mobile');
+        // })
+}());

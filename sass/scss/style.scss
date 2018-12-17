@@ -1,15 +1,15 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('/kancelaria/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('/kancelaria/fonts/Roboto-Light.ttf');
+    src: url('/fonts/Roboto-Light.ttf');
 }
 @font-face {
     font-family: 'TrajanPro-Regular';
-    src: url('/kancelaria//fonts/TrajanPro-Regular.otf');
+    src: url('/fonts/TrajanPro-Regular.otf');
 }
 body {
     margin: 0;
@@ -136,7 +136,7 @@ body {
             background-repeat:no-repeat;
             background-size:contain;
             background-position:center;
-            background: url("/kancelaria/imgs/header-minified.jpg");
+            background: url("/imgs/header-minified.jpg");
             background-size: cover;
             height: 80vh;
             background-position: center;
@@ -235,11 +235,12 @@ body {
             justify-content: center;
             text-align: justify;
             div {
-                width: 250px;
-                height: 250px;
+                width: 350px;
+                height: 350px;
                 background-color: #fff;
                 margin: 10px;
                 padding: 20px;
+                text-align: left;
                 transition: 0.2s;
                 position: relative;
                 box-shadow: 0 0 5px rgba(33,33,33,.2);
@@ -261,6 +262,11 @@ body {
                 ul {
                     li {
                         list-style-type: none;
+                        &::before {
+                            content: ">";
+                            color: #1b2540;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
@@ -301,8 +307,10 @@ body {
                 text-align: center;
                 text-align: justify;
                 img {
-                    width: 100%;
-                    height: 400px;
+                    // width: 100%;
+                    // height: 400px;
+                    height: 420px;
+                    width: 280px;
                 }
                 .memberDetails {
                     width: auto;
@@ -663,16 +671,8 @@ body {
         height: 80vh;
     }
 }
-
     //Styles for employee page
     .employeeSubpage {
-        header {
-            .navbar {
-                ul li a {
-                    color: black;
-                }
-            }    
-        }
         .employeeDetails {
             display: flex;
             align-items: center;
@@ -687,6 +687,7 @@ body {
             .employeeDescription {
                 max-width: 600px;
                 margin-top: 10%;
+                text-align: justify;
                 h4 {
                     font-family: 'TrajanPro-Regular';
                     position: relative;
@@ -707,6 +708,16 @@ body {
 
     //EMPLOYEE PAGE MEDIA QUERIES
     @media (max-width: 1000px) {
+        header {
+            .navbar {
+                ul li a {
+                    color: black;
+                }
+            }
+            .sticky ul li a {
+                color:  white;
+            }
+        }
             .employeeDetails {
                 flex-direction: column;
                 justify-content: center;

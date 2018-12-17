@@ -10,6 +10,20 @@
         }
     })
 }());
+
+//Mobile navbar handler
+(function(){
+    let hamburger = document.querySelector('.hamburger');
+    let navList = document.querySelector('.navbar ul');
+    function toggleMenu (e) {
+        if (e.target == hamburger) {
+            navList.classList.toggle('mobile');
+        } else {
+            navList.classList.remove('mobile');
+        }
+    }
+    document.body.addEventListener('click', toggleMenu);
+}());
 //Modal handler
 (function(){
     let modal = document.querySelector('.modal');
@@ -51,7 +65,6 @@
         .bindPopup("<img src=imgs/entrance.jpg alt = Zdjęcie wejcia style=width:200px; height: 200px;/>")
         .openPopup();
 }());
-
 //Smooth scroll
 (function($) {
     $(document).ready(function(){
@@ -74,16 +87,3 @@
         });
     });
     })(jQuery);
-//Mobile navbar handler
-(function(){
-    let hamburger = document.querySelector('.hamburger');
-    let navList = document.querySelector('.navbar ul');
-    function toggleMenu (e) {
-        if (e.target == hamburger) {
-            navList.classList.toggle('mobile');
-        } else {
-            navList.classList.remove('mobile');
-        }
-    }
-    document.body.addEventListener('click', toggleMenu);
-}());

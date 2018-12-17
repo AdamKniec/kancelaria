@@ -45,12 +45,11 @@
     var map = L.map('mapContainer').setView([52.410090,16.933470], 18);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
-L.marker([52.410090,16.933470]).addTo(map)
-    .bindPopup("<img src=imgs/entrance.jpg alt = Zdjęcie wejcia style=width:200px; height: 200px;/>")
-    .openPopup();
+    L.marker([52.410090,16.933470]).addTo(map)
+        .bindPopup("<img src=imgs/entrance.jpg alt = Zdjęcie wejcia style=width:200px; height: 200px;/>")
+        .openPopup();
 }());
 
 //Smooth scroll
@@ -87,7 +86,4 @@ L.marker([52.410090,16.933470]).addTo(map)
         }
     }
     document.body.addEventListener('click', toggleMenu);
-        // hamburger.addEventListener('click', ()=> {
-        //     navList.classList.toggle('mobile');
-        // })
 }());

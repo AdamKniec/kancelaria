@@ -574,5 +574,8 @@ body {
           height: 5px;
           margin: 0 auto;
           margin-top: 20px; } }
+@media (max-width: 768px) {
+  .employeeSubpage header .navbar ul li a {
+    color: white; } }
 
 /*# sourceMappingURL=style.css.map */

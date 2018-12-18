@@ -784,5 +784,12 @@ body {
                 }
             }
         }    
-    }    
+    }  
+    @media (max-width: 768px) {
+        header {
+            .navbar ul li a {
+                color: white;
+            }
+        }
+    }
 }

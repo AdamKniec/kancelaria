@@ -710,6 +710,19 @@ body {
 }
     //Styles for employee page
     .employeeSubpage {
+        header {
+            .navbar  {
+                // ul li a {
+                //     color: white;
+                // }
+                .hamburger{
+                    border-top: 1px solid black;
+                    &::after {
+                        border-top: 1px solid black;
+                    }
+                }
+            }
+        }
         .employeeDetails {
             display: flex;
             align-items: center;
@@ -727,17 +740,13 @@ body {
                 text-align: justify;
                 h4 {
                     font-family: 'TrajanPro-Regular';
-                    position: relative;
-                    display: flex;
-                    padding-bottom: 4%;
-                    margin-top: 0;
                     &:after {
                         content: '';
-                        position: absolute;
                         background-color: #ae974f;
+                        display: block;
                         height: 5px;
-                        bottom: 0;
                         width: 50px;
+                        margin-top: 20px;
                     }
                 }
             }
@@ -755,20 +764,25 @@ body {
                 color:  white;
             }
         }
-            .employeeDetails {
+        .employeeDetails {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .employeeDescription {
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .employeeDescription {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    h4 {
-                        justify-content: center;
-                    }
+                h4 {
+                    font-family: 'TrajanPro-Regular';
+                &:after {
+                    content: '';
+                    height: 5px;
+                    margin: 0 auto;
+                    margin-top: 20px;
                 }
-            }    
+                }
+            }
+        }    
     }    
-    }
-    
+}

@@ -527,6 +527,10 @@ body {
 @media only screen and (min-width: 1600px) {
   body header .heroBanner {
     height: 80vh; } }
+.employeeSubpage header .navbar .hamburger {
+  border-top: 1px solid black; }
+  .employeeSubpage header .navbar .hamburger::after {
+    border-top: 1px solid black; }
 .employeeSubpage .employeeDetails {
   display: flex;
   align-items: center;
@@ -541,18 +545,14 @@ body {
     margin-top: 10%;
     text-align: justify; }
     .employeeSubpage .employeeDetails .employeeDescription h4 {
-      font-family: 'TrajanPro-Regular';
-      position: relative;
-      display: flex;
-      padding-bottom: 4%;
-      margin-top: 0; }
+      font-family: 'TrajanPro-Regular'; }
       .employeeSubpage .employeeDetails .employeeDescription h4:after {
         content: '';
-        position: absolute;
         background-color: #ae974f;
+        display: block;
         height: 5px;
-        bottom: 0;
-        width: 50px; }
+        width: 50px;
+        margin-top: 20px; }
 @media (max-width: 1000px) {
   .employeeSubpage header .navbar ul li a {
     color: black; }
@@ -568,6 +568,11 @@ body {
       justify-content: center;
       align-items: center; }
       .employeeSubpage .employeeDetails .employeeDescription h4 {
-        justify-content: center; } }
+        font-family: 'TrajanPro-Regular'; }
+        .employeeSubpage .employeeDetails .employeeDescription h4:after {
+          content: '';
+          height: 5px;
+          margin: 0 auto;
+          margin-top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

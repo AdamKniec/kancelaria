@@ -11,15 +11,17 @@
     })
 }());
 
-//Mobile navbar handler
+//Mobile navbar handler 
 (function(){
     let hamburger = document.querySelector('.hamburger');
     let navList = document.querySelector('.navbar ul');
     function toggleMenu (e) {
         if (e.target == hamburger) {
             navList.classList.toggle('mobile');
+            hamburger.classList.toggle('menu-active');
         } else {
             navList.classList.remove('mobile');
+            hamburger.classList.remove('menu-active');
         }
     }
     document.body.addEventListener('click', toggleMenu);

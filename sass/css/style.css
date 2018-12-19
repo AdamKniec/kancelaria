@@ -192,8 +192,7 @@ body {
       body .offer .intro .offerDescription {
         text-align: center;
         width: 40%;
-        font-size: 1.5rem;
-        text-align: justify; }
+        font-size: 1.5rem; }
     body .offer .offerContainer {
       display: flex;
       flex-wrap: wrap;
@@ -224,11 +223,14 @@ body {
         body .offer .offerContainer div h4 {
           color: #ae974f; }
         body .offer .offerContainer div ul li {
-          list-style-type: none; }
+          list-style-type: none;
+          padding: 2px; }
           body .offer .offerContainer div ul li::before {
             content: ">";
             color: #1b2540;
-            font-weight: bold; }
+            font-weight: bold;
+            position: absolute;
+            left: 50px; }
   body .team {
     display: flex;
     flex-direction: column;
@@ -244,8 +246,7 @@ body {
       align-items: center;
       width: 45%;
       padding-bottom: 5%;
-      text-align: center;
-      text-align: justify; }
+      text-align: center; }
       body .team .teamIntro h3 {
         color: #1b2540;
         font-size: 1.8rem; }
@@ -445,13 +446,17 @@ body {
         text-align: center;
         padding: 0; }
         body footer .footerContentContainer .footerNavigation ul li {
-          padding-bottom: 15px; }
+          padding-bottom: 15px;
+          text-decoration: underline; }
           body footer .footerContentContainer .footerNavigation ul li a {
             list-style-type: none;
             text-decoration: none;
             color: white; }
       body footer .footerContentContainer .contactDetails {
         width: 240px; }
+        body footer .footerContentContainer .contactDetails p a {
+          text-decoration: underline;
+          color: white; }
   body .copyrightContainer p {
     text-align: center;
     opacity: 0.5; }

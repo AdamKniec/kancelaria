@@ -235,7 +235,6 @@ body {
                 text-align: center;
                 width: 40%;
                 font-size: 1.5rem;
-                text-align: justify;
             }
         }
         .offerContainer {
@@ -273,10 +272,13 @@ body {
                 ul {
                     li {
                         list-style-type: none;
+                        padding: 2px;
                         &::before {
                             content: ">";
                             color: #1b2540;
                             font-weight: bold;
+                            position: absolute;
+                            left: 50px;
                         }
                     }
                 }
@@ -299,7 +301,6 @@ body {
             width: 45%;
             padding-bottom: 5%;
             text-align: center;
-            text-align: justify;
             h3 {
                 color: #1b2540;
                 font-size: 1.8rem;
@@ -544,6 +545,7 @@ body {
                     padding: 0;
                     li {
                         padding-bottom: 15px;
+                        text-decoration: underline;
                         a {
                             list-style-type: none;
                             text-decoration: none;
@@ -554,6 +556,10 @@ body {
             }
             .contactDetails {
                 width: 240px;
+                p a {
+                    text-decoration: underline;
+                    color: white;
+                }
             }
         }
     }

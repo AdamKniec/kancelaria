@@ -55,14 +55,14 @@ body {
                 width: 40px;
                 height: 22px;
                 border: 0;
-                border-top: 1px solid #ffffff;
+                border-top: 1px solid white;
                 background: transparent;
                 position: relative;
                 border-bottom: 1px solid white;
                 margin-right: 20px;
                 transition: 0.2s;
                 outline: none;
-                &:before, &:after {
+                &:after {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -190,6 +190,7 @@ body {
                 margin-bottom: 50px;
                 font-family: 'Roboto-Light', 'sans-serif';
                 padding: 10px;
+                text-align: justify;
                 .boldIntro {
                     font-family: 'Roboto-Regular', 'sans-serif';
                     font-size: 1.7rem;
@@ -234,6 +235,7 @@ body {
                 text-align: center;
                 width: 40%;
                 font-size: 1.5rem;
+                text-align: justify;
             }
         }
         .offerContainer {
@@ -288,6 +290,7 @@ body {
         align-items: center;
         padding-top: 5%;
         padding-bottom: 5%;
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
         .teamIntro {
             display: flex;
             flex-direction: column;
@@ -307,7 +310,7 @@ body {
         }
         .membersContainer {
             display: flex;
-            align-items: center;
+            // align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             .teamMemberBox {
@@ -682,7 +685,7 @@ body {
                 margin-bottom: 10px;
             }
             .iconsSource {
-                width: 65%;
+                width: 60%;
             }    
         }
     }
@@ -712,11 +715,9 @@ body {
     .employeeSubpage {
         header {
             .navbar  {
-                // ul li a {
-                //     color: white;
-                // }
                 .hamburger{
                     border-top: 1px solid black;
+                    border-bottom: 1px solid black;
                     &::after {
                         border-top: 1px solid black;
                     }
@@ -760,8 +761,17 @@ body {
                     color: black;
                 }
             }
-            .sticky ul li a {
-                color:  white;
+            .sticky {
+                ul li a {
+                    color:  white;
+                }
+                .hamburger {
+                    border-top: 1px solid white;
+                    border-bottom: 1px solid white;
+                    &::after {
+                        border-top: 1px solid white;
+                    }
+                }    
             }
         }
         .employeeDetails {

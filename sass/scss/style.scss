@@ -1,15 +1,15 @@
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('/kancelaria/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('/kancelaria/fonts/Roboto-Light.ttf');
+    src: url('/fonts/Roboto-Light.ttf');
 }
 @font-face {
     font-family: 'TrajanPro-Regular';
-    src: url('/kancelaria/fonts/TrajanPro-Regular.otf');
+    src: url('/fonts/TrajanPro-Regular.otf');
 }
 body {
     margin: 0;
@@ -145,7 +145,7 @@ body {
             background-repeat:no-repeat;
             background-size:contain;
             background-position:center;
-            background: url("/kancelaria/imgs/header-minified.jpg");
+            background: url("/imgs/header-minified.jpg");
             background-size: cover;
             height: 80vh;
             background-position: center;
@@ -309,24 +309,30 @@ body {
                 font-size: 1.5rem;
             }
         }
-        .membersContainer {
+        // .membersContainer {
+            .owl-team.owl-carousel {
             display: flex;
-            // align-items: center;
+            //align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            .teamMemberBox {
+            width: 60%;
+            .sliderItem  {
                 margin: 10px;
-                width: 270px;
-                text-align: center;
-                text-align: justify;
+                // width: 270px;
+                // text-align: center;
+                // text-align: justify;
+                // min-width: 280px;
                 img {
                     // width: 100%;
                     // height: 400px;
-                    height: 420px;
+                    // height: 420px;
+                    // min-width: 280px;
+                    // width: auto;
                     width: 280px;
+                    height: 420px;
                 }
                 .memberDetails {
-                    width: auto;
+                    // width: auto;
                     .name {
                         font-family: 'Roboto-Regular', 'sans-serif';
                         font-weight: bold;
@@ -336,6 +342,7 @@ body {
                         color: #ae974f;
                     }
                     .socialMedia {
+                        display: flex;
                         a {
                             text-decoration: none;
                             img {
@@ -556,6 +563,8 @@ body {
             }
             .contactDetails {
                 width: 240px;
+                text-align: center;
+                padding-bottom: 20px;
                 p a {
                     text-decoration: underline;
                     color: white;
@@ -611,6 +620,11 @@ body {
                 }    
             }
         }    
+        }
+        .team {
+            .owl-team.owl-carousel {
+                width: 80%;
+            }
         }
     }
 }
@@ -669,9 +683,14 @@ body {
                     font-size: 1.4rem;
                 }
             }
-            .membersContainer {
-                justify-content: center;
-            }    
+            .teamMemberBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            // .membersContainer {
+            //     justify-content: center;
+            // }    
         }
         footer {
             .footerContentContainer {
@@ -715,6 +734,19 @@ body {
 @media only screen and (min-width: 1600px) {
     body header .heroBanner {
         height: 80vh;
+        .headerIntroContainer {
+            img {
+                height: 380px;
+                width: 380px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        
     }
 }
     //Styles for employee page

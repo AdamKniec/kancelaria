@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/kancelaria/fonts/Roboto-Regular.ttf"); }
+  src: url("/fonts/Roboto-Regular.ttf"); }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url("/kancelaria/fonts/Roboto-Light.ttf"); }
+  src: url("/fonts/Roboto-Light.ttf"); }
 @font-face {
   font-family: 'TrajanPro-Regular';
-  src: url("/kancelaria/fonts/TrajanPro-Regular.otf"); }
+  src: url("/fonts/TrajanPro-Regular.otf"); }
 body {
   margin: 0;
   padding: 0;
@@ -121,7 +121,7 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      background: url("/kancelaria/imgs/header-minified.jpg");
+      background: url("/imgs/header-minified.jpg");
       background-size: cover;
       height: 80vh;
       background-position: center; }
@@ -252,33 +252,31 @@ body {
         font-size: 1.8rem; }
       body .team .teamIntro p {
         font-size: 1.5rem; }
-    body .team .membersContainer {
+    body .team .owl-team.owl-carousel {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap; }
-      body .team .membersContainer .teamMemberBox {
-        margin: 10px;
-        width: 270px;
-        text-align: center;
-        text-align: justify; }
-        body .team .membersContainer .teamMemberBox img {
-          height: 420px;
-          width: 280px; }
-        body .team .membersContainer .teamMemberBox .memberDetails {
-          width: auto; }
-          body .team .membersContainer .teamMemberBox .memberDetails .name {
-            font-family: 'Roboto-Regular', 'sans-serif';
-            font-weight: bold; }
-          body .team .membersContainer .teamMemberBox .memberDetails .role {
-            font-family: 'Roboto-Regular', 'sans-serif';
-            color: #ae974f; }
-          body .team .membersContainer .teamMemberBox .memberDetails .socialMedia a {
+      flex-wrap: wrap;
+      width: 60%; }
+      body .team .owl-team.owl-carousel .sliderItem {
+        margin: 10px; }
+        body .team .owl-team.owl-carousel .sliderItem img {
+          width: 280px;
+          height: 420px; }
+        body .team .owl-team.owl-carousel .sliderItem .memberDetails .name {
+          font-family: 'Roboto-Regular', 'sans-serif';
+          font-weight: bold; }
+        body .team .owl-team.owl-carousel .sliderItem .memberDetails .role {
+          font-family: 'Roboto-Regular', 'sans-serif';
+          color: #ae974f; }
+        body .team .owl-team.owl-carousel .sliderItem .memberDetails .socialMedia {
+          display: flex; }
+          body .team .owl-team.owl-carousel .sliderItem .memberDetails .socialMedia a {
             text-decoration: none; }
-            body .team .membersContainer .teamMemberBox .memberDetails .socialMedia a img {
+            body .team .owl-team.owl-carousel .sliderItem .memberDetails .socialMedia a img {
               width: 30px;
               height: 30px;
               transition: 0.2s; }
-              body .team .membersContainer .teamMemberBox .memberDetails .socialMedia a img:hover {
+              body .team .owl-team.owl-carousel .sliderItem .memberDetails .socialMedia a img:hover {
                 transform: scale(1.2);
                 transition: 0.2s;
                 cursor: pointer; }
@@ -453,7 +451,9 @@ body {
             text-decoration: none;
             color: white; }
       body footer .footerContentContainer .contactDetails {
-        width: 240px; }
+        width: 240px;
+        text-align: center;
+        padding-bottom: 20px; }
         body footer .footerContentContainer .contactDetails p a {
           text-decoration: underline;
           color: white; }
@@ -482,7 +482,9 @@ body {
       body header .heroBanner .headerIntroContainer img {
         height: 150px;
         width: 150px;
-        margin-top: 35px; } }
+        margin-top: 35px; }
+  body .team .owl-team.owl-carousel {
+    width: 80%; } }
 @media only screen and (max-width: 768px) {
   body header .navbar {
     justify-content: space-between; }
@@ -510,8 +512,10 @@ body {
     width: 80%; }
     body .team .teamIntro p {
       font-size: 1.4rem; }
-  body .team .membersContainer {
-    justify-content: center; }
+  body .team .teamMemberBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   body footer .footerContentContainer div {
     margin: 0; }
   body footer .footerContentContainer .footerNavigation {
@@ -533,7 +537,14 @@ body {
     margin-bottom: 10px; } }
 @media only screen and (min-width: 1600px) {
   body header .heroBanner {
-    height: 80vh; } }
+    height: 80vh; }
+    body header .heroBanner .headerIntroContainer img {
+      height: 380px;
+      width: 380px; }
+    body header .heroBanner .headerIntroContainer h1 {
+      font-size: 2.5rem; }
+    body header .heroBanner .headerIntroContainer p {
+      font-size: 1.5rem; } }
 .employeeSubpage header .navbar .hamburger {
   border-top: 1px solid black;
   border-bottom: 1px solid black; }

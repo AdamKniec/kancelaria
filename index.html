@@ -433,13 +433,13 @@
             <h3>Wyślij wiadomość</h2>
             <form action="https://formspree.io/kancelaria@kgrp.pl" method="POST" class="form">
                 <label for="name">
-                    <input placeholder="Twoje imię i nazwisko" type="text" name="nameAndSurname">
+                    <input placeholder="Twoje imię i nazwisko" type="text" name="nameAndSurname" required="required">
                 </label>
                 <label for="e-mail">
-                    <input placeholder="Ades email" type="email">
+                    <input placeholder="Ades email" type="email" required="required">
                 </label>
                 <label for="message">
-                    <textarea name="message" id="" cols="30" placeholder="W czym możemy pomóc?" rows="10"></textarea>    
+                    <textarea name="message" id="" cols="30" placeholder="W czym możemy pomóc?" rows="10" required="required"></textarea>    
                 </label>
                 <label for="agreement" class="agreement">
                     <p>Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <span class="termsTrigger">informacją</span></p>

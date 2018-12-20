@@ -33,10 +33,10 @@
 (function(){
     var owl = $('.owl-team owl-carousel');
     owl.owlCarousel({
-        items:2,
+        // items:2,
         loop:true,
         margin:10,
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
         responsiveClass:true,

@@ -274,8 +274,8 @@ body {
                         list-style-type: none;
                         padding: 2px;
                         &::before {
-                            content: ">";
-                            color: #1b2540;
+                            content: "-";
+                            color: #ae974f;
                             font-weight: bold;
                             position: absolute;
                             left: 50px;
@@ -396,6 +396,8 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 height: 200px;
+                max-width: 200px;
+                margin: 0 auto;
                 img {
                     filter: grayscale(100%);
                     transition:  1s;
@@ -544,7 +546,6 @@ body {
                 margin: 40px;
             }
             .companySummary {
-                text-align: justify;
                 width: 240px;
                 .footerDescriptionInfo {
                     display: flex;
@@ -789,7 +790,7 @@ body {
             align-items: center;
             justify-content: center;
             div {
-                padding: 40px;
+                padding: 20px;
             }
             img {
                 height: 400px;

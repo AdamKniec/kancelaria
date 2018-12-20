@@ -226,8 +226,8 @@ body {
           list-style-type: none;
           padding: 2px; }
           body .offer .offerContainer div ul li::before {
-            content: ">";
-            color: #1b2540;
+            content: "-";
+            color: #ae974f;
             font-weight: bold;
             position: absolute;
             left: 50px; }
@@ -308,7 +308,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 200px; }
+        height: 200px;
+        max-width: 200px;
+        margin: 0 auto; }
         body .partners .owl-carousel .sliderItem img {
           filter: grayscale(100%);
           transition: 1s; }
@@ -439,7 +441,6 @@ body {
       body footer .footerContentContainer div {
         margin: 40px; }
       body footer .footerContentContainer .companySummary {
-        text-align: justify;
         width: 240px; }
         body footer .footerContentContainer .companySummary .footerDescriptionInfo {
           display: flex;
@@ -566,7 +567,7 @@ body {
   align-items: center;
   justify-content: center; }
   .employeeSubpage .employeeDetails div {
-    padding: 40px; }
+    padding: 20px; }
   .employeeSubpage .employeeDetails img {
     height: 400px;
     margin-top: 30%; }

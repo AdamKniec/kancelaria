@@ -802,6 +802,8 @@ body {
                 text-align: justify;
                 h4 {
                     font-family: 'TrajanPro-Regular';
+                    // padding-left: 20px;
+                    // margin-bottom: 0;
                     &:after {
                         content: '';
                         background-color: #ae974f;
@@ -846,6 +848,7 @@ body {
                 align-items: center;
                 h4 {
                     font-family: 'TrajanPro-Regular';
+                    // padding-left: 0;
                 &:after {
                     content: '';
                     height: 5px;

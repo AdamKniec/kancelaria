@@ -102,7 +102,7 @@ body {
                 top:-19px;
                 left: 0;
                 position: absolute;
-                transition: all 0.2s; //tu
+                transition: all 0.2s; 
                 border: 1px solid black;
                 li {
                     color: black;
@@ -312,7 +312,6 @@ body {
         // .membersContainer {
             .owl-team.owl-carousel {
             display: flex;
-            //align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             width: 55%;
@@ -320,21 +319,11 @@ body {
                 margin: 10px;
                 display: flex;
                 justify-content: center;
-                // width: 270px;
-                // text-align: center;
-                // text-align: justify;
-                // min-width: 280px;
                 img {
-                    // width: 100%;
-                    // height: 400px;
-                    // height: 420px;
-                    // min-width: 280px;
-                    // width: auto;
                     width: 280px;
                     height: 420px;
                 }
                 .memberDetails {
-                    // width: auto;
                     .name {
                         font-family: 'Roboto-Regular', 'sans-serif';
                         font-weight: bold;
@@ -361,7 +350,6 @@ body {
                         
                     }
                 }
-                
             }
             .owl-nav {
                 font-size: 100px;
@@ -587,7 +575,6 @@ body {
     }
     .copyrightContainer {
         p {
-
             text-align: center;
             opacity: 0.5;
         }
@@ -644,11 +631,6 @@ body {
             }
         }    
         }
-        // .team {
-        //     .owl-team.owl-carousel {
-        //         width: 80%;
-        //     }
-        // }
     }
 }
 @media only screen and (max-width: 768px) {
@@ -711,9 +693,6 @@ body {
                 flex-direction: column;
                 align-items: center;
             }
-            // .membersContainer {
-            //     justify-content: center;
-            // }    
         }
         footer {
             .footerContentContainer {
@@ -802,8 +781,6 @@ body {
                 text-align: justify;
                 h4 {
                     font-family: 'TrajanPro-Regular';
-                    // padding-left: 20px;
-                    // margin-bottom: 0;
                     &:after {
                         content: '';
                         background-color: #ae974f;
@@ -848,7 +825,6 @@ body {
                 align-items: center;
                 h4 {
                     font-family: 'TrajanPro-Regular';
-                    // padding-left: 0;
                 &:after {
                     content: '';
                     height: 5px;
